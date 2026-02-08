@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Elektro Bosnjak</title>
+    <link rel="stylesheet" href="index.css" />
+  </head>
+  <body>
+    <a href="#vrh" class="vrh">
+        <button class="vrh">▲</button>
+    </a>
+    <div class="navbar" id="vrh">
+      <!--Sekcija s Logom i tekstom-->
+      <section class="logo-container">
+        <img
+          src="slike/logo_sluzbeni.jpg"
+          alt="Elektro Bosnjak Logo"
+          class="logo"
+        />
+      </section>
+      <hr />
+      <!--Sekcija gdje su linkovi koji šalju na druge sekcije na stranici-->
+      <section class="linkovi-container">
+        <a href="#pocetna">Početna</a>
+        <a href="#info">O nama</a>
+        <a href="#projekti">Projekti</a>
+        <a href="#kontakt">Kontakt</a>
+      </section>
+    </div>
+    <div class="dobrodosli-container" id="pocetna">
+      <section class="dobrodosli-main">
+        <h2>Dobrodošli!</h2>
+        <hr class="dobrodosli_crta1" />
+        <h1>ELEKTRO BOŠNJAK</h1>
+        <hr class="dobrodosli_crta2" />
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam aliquid
+          provident vitae corrupti amet. Ducimus aperiam inventore consequatur
+          iusto. Repellat temporibus quisquam, nam similique repudiandae
+          reprehenderit nisi laboriosam porro sint.
+        </p>
+        <section class="dobr_button-cont">
+          <button>Saznajte više</button>
+          <button>Saznajte više</button>
+        </section>
+      </section>
+    </div>
+    <div class="info-container" id="info">
+      <h1>O nama</h1>
+      <hr class="info-cont-linija1" />
+      <p>
+        Elektro Bošnjak je obiteljska tvrtka s dugogodišnjom tradicijom u
+        pružanju vrhunskih elektroinstalacijskih usluga. Naša misija je
+        osigurati sigurnost, pouzdanost i inovativnost u svakom projektu koji
+        preuzimamo. Bilo da se radi o stambenim, komercijalnim ili industrijskim
+        objektima, naš tim stručnjaka je posvećen isporuci rješenja koja
+        zadovoljavaju najviše standarde kvalitete.
+      </p>
+      <hr class="info-cont-linija2" />
+    </div>
+    <div class="djelatnici-container">
+      <h1 class="djelatnici-naslov">Upoznajte naš tim!</h1>
+      <hr class="djelatnici-naslov-linija" />
+
+      <div class="djelatnici-profil">
+        <img src="slike/djelatni_test.jpg" alt="Djelatnik 1" />
+        <h1>Djelatnik 1</h1>
+        <hr />
+        <p>Vlasnik</p>
+      </div>
+      <div class="djelatnici-profil">
+        <img src="slike/djelatni_test.jpg" alt="Djelatnik 1" />
+        <h1>Djelatnik 2</h1>
+        <hr />
+        <p>Vlasnik</p>
+      </div>
+      <div class="djelatnici-profil">
+        <img src="slike/djelatni_test.jpg" alt="Djelatnik 1" />
+        <h1>Djelatnik 3</h1>
+        <hr />
+        <p>Vlasnik</p>
+      </div>
+    </div>
+
+    <div class="projekti-container" id="projekti">
+      <h1>Naši projekti!</h1>
+      <div class="projekti_slideshow-container">
+        <div class="projekti_slideshow">
+          <img src="slike/djelatni_test.jpg" style="width: 100%" />
+          <section class="projekti_slideshow_tekst">Zgrada 1</section>
+        </div>
+
+        <div class="projekti_slideshow">
+          <img src="slike/dobrodosli_s2.png" style="width: 100%" />
+          <section class="projekti_slideshow_tekst">Zgrada 2</section>
+        </div>
+
+        <div class="projekti_slideshow">
+          <img src="slike/djelatni_test.jpg" style="width: 100%" />
+          <section class="projekti_slideshow_tekst">Zgrada 3</section>
+        </div>
+
+        <button class="prije" onclick="plusSlides(-1)">❮</button>
+        <button class="poslije" onclick="plusSlides(1)">❯</button>
+      </div>
+
+      <div>
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+      </div>
+    </div>
+
+    <div class="kontakt-container" id="kontakt">
+      <section class="kontakt">
+        <h1>Kontaktiraj nas!</h1>
+        <hr />
+        <div class="kontakt-link">
+          <section class="mail-ikona"></section>
+          <p>info@elektrobosnjak.com</p>
+        </div>
+
+        <div class="kontakt-link">
+          <section class="mobitel-ikona"></section>
+          <p>+387 61 234 567</p>
+        </div>
+      </section>
+    </div>
+
+    <script src="slideshow.js"></script>
+
+    <footer>
+      <p>© 2026 Elektro Bošnjak. Sva prava pridržana.</p>
+      <p>
+        Stranicu izradio:
+        <a href="mailto:mihaelzec10@gmail.com"><span>Mihael Zec</span></a>
+      </p>
+    </footer>
+  </body>
+</html>
