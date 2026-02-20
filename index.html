@@ -8,7 +8,7 @@
   </head>
   <body>
     <a href="#vrh" class="vrh">
-        <button class="vrh">▲</button>
+      <button class="vrh">▲</button>
     </a>
     <div class="navbar" id="vrh">
       <!--Sekcija s Logom i tekstom-->
@@ -41,68 +41,140 @@
           reprehenderit nisi laboriosam porro sint.
         </p>
         <section class="dobr_button-cont">
-          <button>Saznajte više</button>
-          <button>Saznajte više</button>
+          <a href="#info">
+            <button>Saznajte više o nama!</button>
+          </a>
+          <a href="#kontakt">
+            <button>Kontaktiraj nas!</button>
+          </a>
         </section>
       </section>
     </div>
     <div class="info-container" id="info">
-      <h1>O nama</h1>
-      <hr class="info-cont-linija1" />
-      <p>
-        Elektro Bošnjak je obiteljska tvrtka s dugogodišnjom tradicijom u
-        pružanju vrhunskih elektroinstalacijskih usluga. Naša misija je
-        osigurati sigurnost, pouzdanost i inovativnost u svakom projektu koji
-        preuzimamo. Bilo da se radi o stambenim, komercijalnim ili industrijskim
-        objektima, naš tim stručnjaka je posvećen isporuci rješenja koja
-        zadovoljavaju najviše standarde kvalitete.
-      </p>
-      <hr class="info-cont-linija2" />
+      <div class="info-sadrzaj">
+        <div class="info-slika_ljevo"></div>
+        <div class="info-h1_desno">
+          <h1>O nama</h1>
+        </div>
+        <div class="info-p_desno">
+          <p>
+            Elektro Bošnjak je renomirana građevinska tvrtka s dugogodišnjim
+            iskustvom u industriji. Naša misija je pružiti vrhunske usluge i
+            kvalitetne građevinske projekte koji zadovoljavaju potrebe naših
+            klijenata. S ponosom ističemo našu stručnost, inovativnost i
+            predanost svakom projektu koji preuzimamo.
+          </p>
+        </div>
+      </div>
+      <section class="info-prazno"></section>
+      <div class="info-sadrzaj">
+        <section class="info-slika_desno"></section>
+        <section class="info-p_lijevo">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla,
+            cumque. Deleniti, sint! Sed minus quia corporis vel autem similique,
+            quaerat fuga earum dolorum, velit possimus itaque inventore
+            veritatis maxime minima.
+          </p>
+        </section>
+        <section class="info-h1_lijevo">
+          <h1>Naša vizija</h1>
+        </section>
+      </div>
     </div>
     <div class="djelatnici-container">
-      <h1 class="djelatnici-naslov">Upoznajte naš tim!</h1>
-      <hr class="djelatnici-naslov-linija" />
-
-      <div class="djelatnici-profil">
-        <img src="slike/djelatni_test.jpg" alt="Djelatnik 1" />
-        <h1>Djelatnik 1</h1>
-        <hr />
-        <p>Vlasnik</p>
-      </div>
-      <div class="djelatnici-profil">
-        <img src="slike/djelatni_test.jpg" alt="Djelatnik 1" />
-        <h1>Djelatnik 2</h1>
-        <hr />
-        <p>Vlasnik</p>
-      </div>
-      <div class="djelatnici-profil">
-        <img src="slike/djelatni_test.jpg" alt="Djelatnik 1" />
-        <h1>Djelatnik 3</h1>
-        <hr />
-        <p>Vlasnik</p>
-      </div>
+      <section class="djelatnici-main">
+        <div class="djelatnici-profil-container">
+          <section class="djelatnici-profil-main">
+            <img
+              src="slike/osoba3.jpg"
+              alt="Osoba1"
+              class="djelatnici-profil-slika"
+            />
+            <h1>Ime Prezime</h1>
+            <p>Pozicija</p>
+            <a href="#sss" class="djelatnici-profil-gumb">
+              <img src="slike/kontakt.svg" alt="" srcset="" />
+              Kontaktiraj!
+            </a>
+          </section>
+        </div>
+        <div class="djelatnici-profil-container">
+          <section class="djelatnici-profil-main">
+            <img
+              src="slike/osoba1.jpg"
+              alt="Osoba1"
+              class="djelatnici-profil-slika"
+            />
+            <h1>Ime Prezime</h1>
+            <p>Pozicija</p>
+            <a href="#sss" class="djelatnici-profil-gumb">
+              <img src="slike/kontakt.svg" alt="" srcset="" />
+              Kontaktiraj!
+            </a>
+          </section>
+        </div>
+      </section>
     </div>
+    <div class="galerija-container">
+      <div class="galerija-slides">
+        <img src="slike/galerija_s1.jpeg" style="width: 100%" height="100%" />
+      </div>
 
-    <div class="projekti-container" id="projekti">
-      <h1>Naši projekti!</h1>
+      <div class="galerija-slides">
+        <img src="slike/galerija_s2.jpeg" style="width: 100%" height="100%" />
+      </div>
+
+      <div class="galerija-slides">
+        <img src="slike/galerija_s3.jpeg" style="width: 100%" height="100%" />
+      </div>
+
+      <button class="galerija-gumb lijevi" onclick="mjenjajSlide(-1)">
+        &#10094;
+      </button>
+      <button class="galerija-gumb desni" onclick="mjenjajSlide(1)">
+        &#10095;
+      </button>
+
+      <section>
+        <span class="galerija-dot"></span>
+        <span class="galerija-dot"></span>
+        <span class="galerija-dot"></span>
+      </section>
+    </div>
+    <!--<div class="projekti-container" id="projekti">
       <div class="projekti_slideshow-container">
         <div class="projekti_slideshow">
-          <img src="slike/djelatni_test.jpg" style="width: 100%" />
-          <section class="projekti_slideshow_tekst">Zgrada 1</section>
+          <img src="slike/projekt1_s1.jpg" style="width: 100%" />
+          <section class="projekti_slideshow_tekst">
+            <p>Zgrada 1</p>
+            <p>Ilica 444</p>
+          </section>
         </div>
 
         <div class="projekti_slideshow">
-          <img src="slike/dobrodosli_s2.png" style="width: 100%" />
-          <section class="projekti_slideshow_tekst">Zgrada 2</section>
+          <img src="slike/projekt_s2.jfif" style="width: 100%" />
+          <section class="projekti_slideshow_tekst">
+            <p>Zgrada 3</p>
+            <p>Ilica 444</p>
+          </section>
         </div>
 
         <div class="projekti_slideshow">
-          <img src="slike/djelatni_test.jpg" style="width: 100%" />
-          <section class="projekti_slideshow_tekst">Zgrada 3</section>
+          <img src="slike/projekt_s3.jpg" style="width: 100%" />
+          <section class="projekti_slideshow_tekst">
+            <p>Zgrada 3</p>
+            <p>Ilica 444</p>
+          </section>
         </div>
 
-        <button class="prije" onclick="plusSlides(-1)">❮</button>
-        <button class="poslije" onclick="plusSlides(1)">❯</button>
+        <button class="prije">
+          <i onclick="plusSlides(-1)">&#10094;</i>
+        </button>
+
+        <button class="poslije" onclick="plusSlides(1)">
+          <i>&#10095;</i>
+        </button>
       </div>
 
       <div>
@@ -110,25 +182,28 @@
         <span class="dot" onclick="currentSlide(2)"></span>
         <span class="dot" onclick="currentSlide(3)"></span>
       </div>
-    </div>
+    </div>-->
 
     <div class="kontakt-container" id="kontakt">
       <section class="kontakt">
         <h1>Kontaktiraj nas!</h1>
         <hr />
         <div class="kontakt-link">
-          <section class="mail-ikona"></section>
-          <p>info@elektrobosnjak.com</p>
+          <a href="mailto:info@elektrobosnjak.com">
+            <section class="mail-ikona"></section>
+            <p>info@elektrobosnjak.com</p></a>
+          
         </div>
 
         <div class="kontakt-link">
-          <section class="mobitel-ikona"></section>
-          <p>+387 61 234 567</p>
+          <a href="whatsapp://send?abid=p0916011777&text=Hello%2C%20World!">
+            <section class="mobitel-ikona"></section>
+            <p>+385 123 456 78</p></a>
         </div>
       </section>
     </div>
-
     <script src="slideshow.js"></script>
+    <script src="galerija_slide.js"></script>
 
     <footer>
       <p>© 2026 Elektro Bošnjak. Sva prava pridržana.</p>

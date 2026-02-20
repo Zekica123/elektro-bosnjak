@@ -23,6 +23,28 @@ function showSlides(n) {
   }
   slides[slideIndex-1].style.display = "block";  
   dots[slideIndex-1].className += " active";
-
+  setTimeout(prikaziSlajdove, 2000);
 }
 
+
+function updateButtonClass() {
+    const prevButton = document.querySelector('.prije');
+    const nextButton = document.querySelector('.poslije');
+
+    if (!prevButton || !nextButton) return;
+
+    // Remove all direction classes first
+    prevButton.classList.remove('gore', 'dolje', 'lijevo', 'desno');
+    nextButton.classList.remove('gore', 'dolje', 'lijevo', 'desno');
+
+    if (window.innerWidth < 820) {
+        prevButton.classList.add('strelica', 'dolje');
+        nextButton.classList.add('strelica', 'gore');
+    } else {
+        prevButton.classList.add('strelica', 'lijevo');
+        nextButton.classList.add('strelica', 'desno');
+    }
+}
+
+updateButtonClass();
+window.addEventListener('resize', updateButtonClass);
