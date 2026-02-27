@@ -13,7 +13,7 @@ html {
 
 body {
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #ff6600;
+  background-color: #333333;
   min-height: 100vh;
   width: 100%;
 }
@@ -58,7 +58,8 @@ button.vrh {
 }
 
 .logo-container img {
-  width: 30%;
+  width: 50%;
+  max-width: 800px;
   height: auto;
 }
 
@@ -279,23 +280,59 @@ button.vrh {
 }
 
 .galerija-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
   position: relative;
   width: 100%;
-  height: 100vh;
-  border-top: 4px solid #ff6600;
+  min-height: 100vh;
+  height: auto;
+  border-bottom: 4px solid #ff6600;
+}
+
+.galerija-main {
+  position: relative;
+  width: 90%;
+  margin: 50px auto 25px auto;
+  height: 500px;
+  border-radius: 10px;
+  background-color: #f29559;
+  border: 4px solid #ff6600;
+  box-shadow: 4px 4px 15px #000000;
+}
+
+.galerija-main:hover {
+  box-shadow: 4px 4px 15px #f29559;
+  transition: 0.3s;
 }
 
 .galerija-dot {
-  display: none;
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  margin: 0 10px 50px 10px;
+  background-color: #ff6600;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.galerija-dot.aktivna {
+  background-color: #ff6600;
+  border-radius: 10px;
+  width: 30px;
 }
 
 .galerija-container img {
-  vertical-align: middle;
   object-fit: cover;
+  width: 100%;
+  height: 100%;
 }
 
 .galerija-slides {
   height: 100%;
+  width: 100%;
   display: none;
   animation-name: fade;
   animation-duration: 1.5s;
@@ -328,161 +365,142 @@ button.vrh {
   right: 30px;
 }
 
-.slika_prvi {
-  width: 100%;
-  background-image: url(slike/kontakt_s1.jpg);
-  background-size: cover;
-  background-position: top;
-  height: 50vh;
-  border-top: 4px solid #ff6600;
-  border-bottom: 4px solid #ff6600;
-}
-
-.slika_drugi {
-  width: 100%;
-  background-image: url(slike/kontakt_s1.jpg);
-  background-size: cover;
-  background-position: center;
-  height: 50vh;
-  border-top: 4px solid #ff6600;
-  border-bottom: 4px solid #ff6600;
-}
-
-.slika_treci {
-  width: 100%;
-  background-image: url(slike/kontakt_s1.jpg);
-  background-size: cover;
-  background-position: bottom;
-  height: 50vh;
-  border-top: 4px solid #ff6600;
-  border-bottom: 4px solid #ff6600;
-}
-
-.djelatnici-container {
+.usluge-container {
   position: relative;
   width: 100%;
   min-height: 100vh;
+  height: auto;
   background-color: #333333;
+  padding: 100px 0;
   border-bottom: 4px solid #ff6600;
-  padding: 50px 50px;
 }
 
-.djelatnici-main {
-  position: relative;
-  display: flex;
-  flex-wrap: wrap;
+.usluge-naslov {
   width: 100%;
-  height: 100%;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-}
-
-.djelatnici-profil-container {
-  flex: 45%;
+  height: auto;
+  padding: 50px 0;
   text-align: center;
-  border-radius: 10px;
-  background-color: #ff6600;
-  display: flex;
-  padding: 10px 10px;
-  align-items: center;
-  justify-content: center;
-  margin: 20px;
-}
-
-.djelatnici-profil-main {
-  justify-content: center;
-  width: 100%;
-  height: 100%;
-  border-radius: 10px;
-  background-color: #f29559;
-  box-shadow: 4px 4px 15px black;
-}
-
-.djelatnici-profil-slika {
-  margin: 10px 0;
-  width: 50%;
-  height: 300px;
-  object-fit: cover;
-  border: 4px solid #283845;
-  box-shadow: 3px 3px 10px black;
-}
-
-.djelatnici-profil-main h1 {
-  font-size: 2rem;
-  color: #333333;
-  font-weight: bold;
-  padding: 10px 0;
-}
-
-.djelatnici-profil-main p {
-  font-size: 1.5rem;
-  color: #333333;
-  padding: 15px;
-}
-
-.djelatnici-profil-gumb {
-  margin: 15px auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-decoration: none;
-  color: #333333;
-  font-size: 1.5rem;
-  width: 50%;
-  padding: 15px 20px;
-  font-weight: bold;
-  border: 4px solid #333333;
-  background-color: transparent;
-  border-radius: 10px;
-  cursor: pointer;
-}
-
-.djelatnici-profil-gumb img {
-  width: 30px;
-  height: 30px;
-  margin-right: 10px;
-}
-
-.djelatnici-profil-gumb:hover {
-  background-color: white;
   color: #ff6600;
-  transition: 0.3s ease;
-  box-shadow: 4px 4px 15px #333333;
+  font-size: 2rem;
 }
 
-.mySlides {
-  display: none;
-  position: absolute;
+.usluge-naslov-crta {
+  width: 60%;
+  height: 4px;
+  background-color: #ff6600;
+  border: 0;
+  margin: 15px auto 15px auto;
+}
+
+.usluge-main {
+  display: flex;
+
+  flex-direction: row;
+  width: 90%;
+  height: 100%;
+  margin: 50px auto;
+  gap: 20px;
+}
+
+.usluge-main-kartica {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 40%;
+  min-height: 200px;
+  height: auto;
+  background-color: #f29559;
+  border-radius: 10px;
+  border: 4px solid #ff6600;
+  box-shadow: 0 4px 15px black;
+  text-align: center;
+}
+
+.usluge-main-kartica img {
+  width: 100px;
+  height: 100px;
+  margin: 20px 0;
+}
+
+.usluge-main-kartica-p {
+  width: 100%;
+  padding: 25px 50px;
+  font-size: 1.2rem;
+  color: #333333;
+}
+
+.usluge-main-kartica:hover {
+  box-shadow: 0 4px 15px #f29559;
+  transition: 0.3s;
 }
 
 .projekti-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
   position: relative;
   width: 100%;
   min-height: 100vh;
-  background-color: #333333;
+  height: auto;
+  border-bottom: 4px solid #ff6600;
 }
 
 .projekti_slideshow-container {
   position: relative;
+  width: 90%;
+  margin: 50px auto 25px auto;
+  height: 500px;
+  border-radius: 10px;
+  background-color: #f29559;
+  border: 4px solid #ff6600;
+  box-shadow: 4px 4px 15px #000000;
 }
 
 .projekti_slideshow {
-  position: relative;
-  height: 50%;
-  width: 80%;
-  margin: 0 auto;
+  height: 100%;
+  width: 100%;
   display: none;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+.projekti_slideshow_tekst {
+  width: 100%;
+  min-height: 20%;
+  height: auto;
+  position: absolute;
+  bottom: 0;
+  background-color: white;
+  text-align: center;
+}
+
+.projekti_slideshow_tekst h1 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  width: 100%;
+  padding: 20px 0;
+  background-color: #333333;
+  color: white;
+}
+
+.projekti_slideshow_tekst p {
+  font-size: 1.2rem;
+  padding: 15px;
 }
 
 .projekti_slideshow img {
-  width: 100%;
-  height: 100%;
   object-fit: cover;
+  width: 100%;
+  height: 80%;
 }
 
-.prije,
-.poslije {
+.projekti_slideshow-container:hover {
+  box-shadow: 4px 4px 15px #f29559;
+  transition: 0.3s;
+}
+
+.projekt-gumb {
   cursor: pointer;
   border-radius: 10px;
   padding: 10px 50px;
@@ -502,76 +520,28 @@ button.vrh {
 }
 
 .prije {
-  top: 50%;
-  left: 4px;
+  left: 30px;
 }
 
 .poslije {
-  top: 50%;
-  right: 4px;
+  right: 30px;
 }
 
-.dot {
-  display: none;
-  clear: both;
-}
-
-.projekti_slideshow_tekst {
-  width: 100%;
-  position: absolute;
-  bottom: 0;
-  background-color: #ff6600;
-  color: #333333;
-  padding: 10px;
-  text-align: center;
-}
-
-.projekti-naslov {
-  font-size: 2.5rem;
-  color: #ff6600;
-  text-align: center;
-}
-
-.projekti-naslov-linija {
-  border: 0;
-  height: 4px;
-  background-color: #ff6600;
-  width: 60%;
-  margin: 10px auto 50px auto;
-}
-
-.projekt-kartica p {
-  padding: 15px;
-  font-size: 1.2rem;
-  color: white;
-  text-align: center;
-}
-
-.strelica {
-  border: solid black;
-  border-width: 0 3px 3px 0;
+.projekti-dot {
   display: inline-block;
-  padding: 3px;
+  width: 15px;
+  height: 15px;
+  margin: 0 10px 50px 10px;
+  background-color: #ff6600;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
 }
 
-.desno {
-  transform: rotate(-45deg);
-  -webkit-transform: rotate(-45deg);
-}
-
-.lijevo {
-  transform: rotate(135deg);
-  -webkit-transform: rotate(135deg);
-}
-
-.gore {
-  transform: rotate(-135deg);
-  -webkit-transform: rotate(-135deg);
-}
-
-.desno {
-  transform: rotate(45deg);
-  -webkit-transform: rotate(45deg);
+.projekti-dot.aktivna {
+  background-color: #ff6600;
+  border-radius: 10px;
+  width: 30px;
 }
 
 .kontakt-container {
@@ -659,6 +629,18 @@ footer {
   text-align: center;
 }
 
+@keyframes pomakDesno {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(20px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
 @keyframes fade {
   from {
     opacity: 0.4;
@@ -669,14 +651,19 @@ footer {
 }
 
 @media (max-width: 820px) {
+  .logo-container img {
+    width: 60%;
+  }
   .linkovi-container a {
     width: 90%;
     margin: 0 auto;
     text-align: center;
+    font-size: 1.2rem;
   }
 
   .navbar hr {
-    width: 85%;
+    width: 90%;
+    height: 4px;
   }
   .dobrodosli-main {
     height: 100%;
@@ -702,7 +689,7 @@ footer {
     flex-direction: column;
     gap: 0;
     width: 100%;
-    padding: 20px 15px;
+    padding: 15px 0;
   }
 
   .dobrodosli_crta1 {
@@ -718,9 +705,23 @@ footer {
     margin: 10px 0;
   }
 
+  .info-container {
+    position: relative;
+    padding: 0;
+    margin: 0;
+  }
+
+  .info-sadrzaj {
+    position: relative;
+    height: 500px;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+  }
+
   .info-slika_ljevo,
   .info-slika_desno {
-    position: relative;
+    position: absolute;
     top: 0;
     left: 0;
     height: 100%;
@@ -732,154 +733,149 @@ footer {
 
   .info-p_desno,
   .info-p_lijevo {
-    height: 300px;
-    position: absolute;
-    background-color: #f29559cc;
-    left: 0;
     top: 100px;
+    left: 0;
+    height: 400px;
+    position: relative;
+    background-color: #f29559cc;
     width: 100%;
-    padding: 0;
+    padding: 15px;
   }
 
   .info-p_desno p,
   .info-p_lijevo p {
-    position: relative;
-    height: 100%;
-    width: 100%;
-    padding: 15px;
-    display: flex;
-    align-items: center;
     font-size: 1.2rem;
   }
 
   .info-h1_desno,
   .info-h1_lijevo {
-    position: absolute;
+    font-size: 1.5rem;
+    height: 100px;
     width: 100%;
-    height: 15%;
+    position: absolute;
     top: 0;
     left: 0;
-    z-index: 1;
-    padding: 50px 10px;
+    padding: 20px 20px;
   }
 
-  .djelatnici-container {
-    flex-direction: row;
-  }
-
-  .djelatnici-profil-container {
-    margin: 10px 0;
-    flex: 100%;
-  }
-
-  .djelatnici-profil-slika {
-    margin: 5px 0;
-    width: 80%;
-    height: 200px;
-  }
-
-  .djelatnici-profil-main h1 {
-    font-size: 1.5rem;
-    padding: 5px 0;
-  }
-
-  .djelatnici-profil-main p {
-    font-size: 1rem;
-    padding: 5px;
-  }
-
-  .djelatnici-profil-gumb {
-    margin: 5px auto;
-    font-size: 1rem;
-    width: 80%;
-    padding: 15px 20px;
-    font-weight: bold;
-    border: 4px solid #333333;
-    background-color: transparent;
-    border-radius: 10px;
-    cursor: pointer;
-  }
-
-  .djelatnici-profil-gumb img {
-    width: 20px;
-    height: 20px;
-    margin-right: 5px;
-  }
-
-  .djelatnici-profil-gumb:hover {
-    background-color: white;
-    color: #ff6600;
-    transition: 0.3s ease;
-    box-shadow: 4px 4px 15px #333333;
-  }
-
-  .galerija-container {
-    height: 50vh;
-    border-top: 0;
-  }
-
-  .galerija-container img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-
-  .slika_prvi,
-  .slika_drugi,
-  .slika_treci {
+  .info-prazno {
     display: none;
     clear: both;
   }
+  /*-------------------------------------------*/
+  /*4. dio -----Usluge------------*/
+  .usluge-container {
+    min-height: 200px;
+    height: auto;
+    padding: 50px 0;
+  }
+  .usluge-naslov {
+    padding: 25px 0;
+    color: #ff6600;
+    font-size: 1.5rem;
+  }
+  .usluge-naslov-crta {
+    margin: 15px 0;
+  }
+  .usluge-main {
+    width: 80%;
+    margin: 25px auto;
+    gap: 15px;
+  }
+  .usluge-main-kartica {
+    width: 50%;
+  }
+  .usluge-main-kartica img {
+    width: 70px;
+    height: 70px;
+    margin: 15px 0;
+  }
+  .usluge-main-kartica-p {
+    width: 100%;
+    padding: 15px 25px;
+    font-size: 1rem;
+    color: #333333;
+  }
+  .usluge-main-kartica h2 {
+    font-size: 1.2rem;
+  }
+  /*-------------------------------------------*/
+  /*5. dio ----- Galerija------------*/
+  .galerija-container {
+    border-top: 4px solid #ff6600;
+  }
+  .galerija-main {
+    width: 80%;
+    margin: 25px auto 15px auto;
+  }
+
+  .galerija-dot {
+    margin: 0 5px 25px 5px;
+  }
+
+  .galerija-gumb {
+    font-size: 15px;
+  }
+
+  .lijevi {
+    left: 5px;
+  }
+
+  .desni {
+    right: 5px;
+  }
+  /*-------------------------------------------*/
+  /*5. dio ----- Projekti------------*/
+  .projekti_slideshow-container {
+    width: 80%;
+    margin: 25px auto 15px auto;
+  }
 
   .projekti_slideshow {
-    height: 400px;
-    width: 100%;
-    border: 0px;
-  }
-
-  .projekti_slideshow-container {
-    width: 90%;
-    margin: 50px auto;
-    position: relative;
-  }
-
-  .projekti_slideshow img {
-    width: 100%;
     height: 100%;
-    object-fit: cover;
-  }
-
-  .prije {
-    height: 50px;
     width: 100%;
-    font-size: 2rem;
-    background-color: white;
-    color: #ff6600;
-    top: 0;
-    left: 0;
-  }
-
-  .poslije {
-    position: absolute;
-    height: 50px;
-    bottom: 0;
-    top: auto;
-    width: 100%;
-    right: 0;
-    background-color: white;
-    color: #ff6600;
-    font-size: 2rem;
-    padding: 10px 0;
+    display: none;
+    animation-name: fade;
+    animation-duration: 1.5s;
   }
 
   .projekti_slideshow_tekst {
     width: 100%;
+    min-height: 20%;
+    height: auto;
     position: absolute;
-    bottom: 50px;
-    background-color: #333333;
-    color: #ff6600;
-    padding: 10px;
+    bottom: 0;
+    background-color: white;
     text-align: center;
+  }
+
+  .projekti_slideshow_tekst h1 {
+    padding: 15px 0;
+  }
+  .projekti_slideshow_tekst p {
+    font-size: 1.2rem;
+    padding: 10px;
+  }
+  .projekt-gumb {
+    font-size: 15px;
+  }
+
+  .prije {
+    left: 5px;
+  }
+
+  .poslije {
+    right: 5px;
+  }
+
+  .projekti-dot {
+    margin: 0 5px 25px 5px;
+  }
+
+  .projekti-dot.aktivna {
+    background-color: #ff6600;
+    border-radius: 10px;
+    width: 30px;
   }
 
   .dobrodosli-main button {
@@ -893,33 +889,246 @@ footer {
     flex-direction: column;
     gap: 15px;
   }
-
-
 }
 
 @media (max-width: 500px) {
-  .info-p_desno p,
-  .info-p_lijevo p {
+  /*1. navbar*/
+  .logo-container img {
+    width: 80%;
+    height: auto;
+  }
+
+  .linkovi-container a {
     font-size: 1rem;
   }
 
+  .navbar hr {
+    display: none;
+  }
+  /*-------------------------------------------*/
+  /*2. Dobrodosli dio*/
+  .dobrodosli-main {
+    padding: 0 10px;
+  }
+
+  .dobrodosli-main h1 {
+    display: none;
+  }
+
+  .dobrodosli-main h2 {
+    text-align: center;
+    font-size: 2rem;
+    padding: 10px;
+  }
+
+  .dobrodosli-main p {
+    font-size: 1rem;
+    text-align: center;
+  }
+
+  .dobrodosli_crta1 {
+    display: none;
+  }
+
+  .dobrodosli_crta2 {
+    display: none;
+  }
+  .dobr_button-cont {
+    gap: 5px;
+    padding: 25px 0;
+  }
+  .dobr_button-cont button {
+    width: 100%;
+    font-size: 1rem;
+    font-style: bold;
+    padding: 10px 10px;
+    border: 2px solid #ff6600;
+    cursor: pointer;
+  }
+  /*-------------------------------------------*/
+  /*3. Info dio*/
+
+  .info-container {
+    min-height: 200px;
+    height: auto;
+    padding: 50px 0;
+  }
+  .info-sadrzaj {
+    position: relative;
+    height: 100%;
+    background-color: #333333;
+  }
+
+  .info-prazno {
+    display: none;
+    clear: both;
+  }
+
+  .info-slika_ljevo,
+  .info-slika_desno {
+    display: none;
+  }
+
+  /* text panel */
+  .info-p_desno,
+  .info-p_lijevo {
+    position: relative; /* ✅ KEY CHANGE (was absolute) */
+    top: auto;
+    left: auto;
+    background-color: #333333;
+    width: 100%;
+    text-align: center;
+    padding: 20px 10px;
+    z-index: 0;
+    height: auto;
+    box-sizing: border-box;
+  }
+
+  .info-p_desno p,
+  .info-p_lijevo p {
+    font-size: 1.2rem;
+  }
+
+  .info-h1_desno,
+  .info-h1_lijevo {
+    position: relative;
+    min-height: auto;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    padding: 10px 10px;
+  }
+
+  .info-h1_desno h1,
+  .info-h1_lijevo h1 {
+    text-align: center;
+    font-size: 2rem;
+  }
+  /*-------------------------------------------*/
+  /*4. dio ----- Usluge------------*/
+  .usluge-container {
+    padding: 25px 0;
+  }
+  .usluge-naslov {
+    font-size: 1.2rem;
+  }
+  .usluge-naslov-crta {
+    margin: 10px 0;
+  }
+  .usluge-main {
+    width: 90%;
+    margin: 25px auto;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .usluge-main-kartica {
+    width: 100%;
+  }
+  .usluge-main-kartica img {
+    width: 50px;
+    height: 50px;
+    margin: 10px 0;
+  }
+  .usluge-main-kartica-p {
+    font-size: 1rem;
+  }
+  
+
+  /*5. dio ------ Galerija*/
+  .galerija-container {
+    min-height: 200px;
+    height: auto;
+    border-top: 4px solid #ff6600;
+  }
+  .galerija-main {
+    height: 500px;
+    width: 90%;
+    margin: 25px auto 25px auto;
+    position: relative;
+  }
+  .galerija-dot {
+    display: none;
+    clear: both;
+  }
   .galerija-gumb {
-    padding: 20px 20px;
-    font-size: 15px;
+    top: auto;
+    font-size: 30px;
+    width: 100%;
+    height: 50px;
+    border-radius: 0;
+    transform: none;
   }
-
   .lijevi {
-    left: 2px;
+    left: 0;
+    top: 0;
   }
-
   .desni {
-    right: 2px;
+    right: 0;
+    bottom: 0;
   }
 
+  .projekti-container {
+    min-height: 200px;
+    height: auto;
+  }
+
+  .projekti_slideshow-container {
+    width: 90%;
+    height: 500px;
+    position: relative;
+    margin: 25px auto 25px auto;
+  }
+
+  .projekti_slideshow {
+    height: 100%;
+    width: 100%;
+    display: none;
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+
+  .projekti_slideshow_tekst {
+    bottom: 50px;
+  }
+
+  .projekti_slideshow_tekst h1 {
+    padding: 10px 0;
+    font-size: 1.2rem;
+  }
+  .projekti_slideshow_tekst p {
+    font-size: 1rem;
+  }
+  .projekt-gumb {
+    font-size: 30px;
+    top: auto;
+    width: 100%;
+    height: 50px;
+    border-radius: 0;
+    transform: none;
+  }
+
+  .prije {
+    left: 0;
+    top: 0;
+  }
+
+  .poslije {
+    right: 0;
+    bottom: 0;
+  }
+
+  .projekti-dot {
+    display: none;
+    clear: both;
+    margin: 0;
+  }
+  /*-------------------------------------------*/
+  /*6. dio ------ Kontakt*/
   .kontakt h1 {
     font-size: 1.5rem;
   }
-
   .kontakt-link {
     width: 80%;
     margin: 10px 0;

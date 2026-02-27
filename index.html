@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Elektro Bosnjak</title>
     <link rel="stylesheet" href="index.css" />
+    <link rel="icon" href="slike/logo_sluzbeni.jpg" />
   </head>
   <body>
     <a href="#vrh" class="vrh">
@@ -24,6 +25,8 @@
       <section class="linkovi-container">
         <a href="#pocetna">Početna</a>
         <a href="#info">O nama</a>
+        <a href="#usluge">Usluge</a>
+        <a href="#galerija">Galerija</a>
         <a href="#projekti">Projekti</a>
         <a href="#kontakt">Kontakt</a>
       </section>
@@ -69,6 +72,9 @@
       <section class="info-prazno"></section>
       <div class="info-sadrzaj">
         <section class="info-slika_desno"></section>
+        <section class="info-h1_lijevo">
+          <h1>Naša vizija</h1>
+        </section>
         <section class="info-p_lijevo">
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla,
@@ -77,77 +83,105 @@
             veritatis maxime minima.
           </p>
         </section>
-        <section class="info-h1_lijevo">
-          <h1>Naša vizija</h1>
-        </section>
       </div>
     </div>
-    <div class="djelatnici-container">
-      <section class="djelatnici-main">
-        <div class="djelatnici-profil-container">
-          <section class="djelatnici-profil-main">
-            <img
-              src="slike/osoba3.jpg"
-              alt="Osoba1"
-              class="djelatnici-profil-slika"
-            />
-            <h1>Ime Prezime</h1>
-            <p>Pozicija</p>
-            <a href="#sss" class="djelatnici-profil-gumb">
-              <img src="slike/kontakt.svg" alt="" srcset="" />
-              Kontaktiraj!
-            </a>
-          </section>
+    <div class="galerija-container" id="galerija">
+      <section class="galerija-main">
+        <div class="galerija-slides">
+          <img src="slike/galerija_s1.jpeg" />
         </div>
-        <div class="djelatnici-profil-container">
-          <section class="djelatnici-profil-main">
-            <img
-              src="slike/osoba1.jpg"
-              alt="Osoba1"
-              class="djelatnici-profil-slika"
-            />
-            <h1>Ime Prezime</h1>
-            <p>Pozicija</p>
-            <a href="#sss" class="djelatnici-profil-gumb">
-              <img src="slike/kontakt.svg" alt="" srcset="" />
-              Kontaktiraj!
-            </a>
-          </section>
+
+        <div class="galerija-slides">
+          <img src="slike/galerija_s2.jpeg" />
         </div>
+
+        <div class="galerija-slides">
+          <img src="slike/galerija_s3.jpeg" />
+        </div>
+
+        <button class="galerija-gumb lijevi" onclick="mjenjajSlide(-1)">
+          &#10094;
+        </button>
+        <button class="galerija-gumb desni" onclick="mjenjajSlide(1)">
+          &#10095;
+        </button>
       </section>
-    </div>
-    <div class="galerija-container">
-      <div class="galerija-slides">
-        <img src="slike/galerija_s1.jpeg" style="width: 100%" height="100%" />
-      </div>
-
-      <div class="galerija-slides">
-        <img src="slike/galerija_s2.jpeg" style="width: 100%" height="100%" />
-      </div>
-
-      <div class="galerija-slides">
-        <img src="slike/galerija_s3.jpeg" style="width: 100%" height="100%" />
-      </div>
-
-      <button class="galerija-gumb lijevi" onclick="mjenjajSlide(-1)">
-        &#10094;
-      </button>
-      <button class="galerija-gumb desni" onclick="mjenjajSlide(1)">
-        &#10095;
-      </button>
-
       <section>
-        <span class="galerija-dot"></span>
-        <span class="galerija-dot"></span>
-        <span class="galerija-dot"></span>
+        <span class="galerija-dot aktivna" onclick="currentSlide(1)"></span>
+        <span class="galerija-dot" onclick="currentSlide(2)"></span>
+        <span class="galerija-dot" onclick="currentSlide(3)"></span>
       </section>
     </div>
-    <!--<div class="projekti-container" id="projekti">
+    <!--Usluge-->
+    <div class="usluge-container" id="usluge">
+      <!--Naslov i crta ispod naslova-->
+      <section class="usluge-naslov">
+        <h1>Naše usluge</h1>
+        <hr class="usluge-naslov-crta" />
+      </section>
+      <!--1. dio s uslugama-->
+      <section class="usluge-main">
+        <div class="usluge-main-kartica">
+         <section>
+            <img src="slike/provjera_ikona.svg" alt="Provjera">
+          </section>
+          <h2>Provjera i ispitivanje instalacija</h2>
+          <section class="usluge-main-kartica-p">
+              <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas
+            deleniti cumque, voluptate quisquam sed doloremque.
+              </p>
+          </section>
+         
+        </div>
+        <div class="usluge-main-kartica">
+          <section>
+            <img src="slike/servis_slika.svg" alt="Provjera">
+          </section>
+          <h2>Servis i održavanje</h2>
+          <section class="usluge-main-kartica-p">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas
+              deleniti cumque, voluptate quisquam sed doloremque.
+            </p>
+          </section>
+        </div>
+      </section>
+      <!--2. dio s uslugama-->
+      <section class="usluge-main">
+        <div class="usluge-main-kartica">
+          <section>
+            <img src="slike/radovi_ikona.svg" alt="Radovi">
+          </section>
+          <h2>Radovi na objektima</h2>
+          <section class="usluge-main-kartica-p">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas
+              deleniti cumque, voluptate quisquam sed doloremque.
+            </p>
+          </section>
+        </div>
+        <div class="usluge-main-kartica">
+          <section>
+            <img src="slike/tehnica_rjesenja_ikona.svg" alt="Ostalo">
+          </section>
+          <h2>Tehnička rješenja</h2>
+          <section class="usluge-main-kartica-p">
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas
+              deleniti cumque, voluptate quisquam sed doloremque.
+          </p>
+        </div>
+      </section>
+    </div>
+   
+    </div>
+    <div class="projekti-container" id="projekti">
       <div class="projekti_slideshow-container">
         <div class="projekti_slideshow">
           <img src="slike/projekt1_s1.jpg" style="width: 100%" />
           <section class="projekti_slideshow_tekst">
-            <p>Zgrada 1</p>
+            <h1>Projekt 1</h1>
             <p>Ilica 444</p>
           </section>
         </div>
@@ -155,7 +189,7 @@
         <div class="projekti_slideshow">
           <img src="slike/projekt_s2.jfif" style="width: 100%" />
           <section class="projekti_slideshow_tekst">
-            <p>Zgrada 3</p>
+            <h1>Projekt 2</h1>
             <p>Ilica 444</p>
           </section>
         </div>
@@ -163,27 +197,26 @@
         <div class="projekti_slideshow">
           <img src="slike/projekt_s3.jpg" style="width: 100%" />
           <section class="projekti_slideshow_tekst">
-            <p>Zgrada 3</p>
+            <h1>Projekt 3</h1>
             <p>Ilica 444</p>
           </section>
         </div>
 
-        <button class="prije">
-          <i onclick="plusSlides(-1)">&#10094;</i>
+        <button class="projekt-gumb prije" onclick="mjenajajProjektSlide(-1)">
+          &#10094;
         </button>
 
-        <button class="poslije" onclick="plusSlides(1)">
-          <i>&#10095;</i>
+        <button class="projekt-gumb poslije" onclick="mjenajajProjektSlide(1)">
+          &#10095;
         </button>
       </div>
-
-      <div>
-        <span class="dot" onclick="currentSlide(1)"></span>
-        <span class="dot" onclick="currentSlide(2)"></span>
-        <span class="dot" onclick="currentSlide(3)"></span>
-      </div>
-    </div>-->
-
+      <!--Tockice za pomicanje slajdova------Projekti-------->
+      <section>
+        <span class="projekti-dot aktivna" onclick="currentSlide(1)"></span>
+        <span class="projekti-dot" onclick="currentSlide(2)"></span>
+        <span class="projekti-dot" onclick="currentSlide(3)"></span>
+      </section>
+    </div>
     <div class="kontakt-container" id="kontakt">
       <section class="kontakt">
         <h1>Kontaktiraj nas!</h1>
@@ -191,18 +224,19 @@
         <div class="kontakt-link">
           <a href="mailto:info@elektrobosnjak.com">
             <section class="mail-ikona"></section>
-            <p>info@elektrobosnjak.com</p></a>
-          
+            <p>info@elektrobosnjak.com</p></a
+          >
         </div>
 
         <div class="kontakt-link">
           <a href="whatsapp://send?abid=p0916011777&text=Hello%2C%20World!">
             <section class="mobitel-ikona"></section>
-            <p>+385 123 456 78</p></a>
+            <p>+385 123 456 78</p></a
+          >
         </div>
       </section>
     </div>
-    <script src="slideshow.js"></script>
+    <script src="projekti_slide.js"></script>
     <script src="galerija_slide.js"></script>
 
     <footer>
