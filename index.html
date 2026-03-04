@@ -86,6 +86,10 @@
       </div>
     </div>
     <div class="galerija-container" id="galerija">
+      <section class="galerija-naslov">
+        <h1>Slike s naših projekata!</h1>
+        <hr class="galerija-naslov-crta">
+      </section>
       <section class="galerija-main">
         <div class="galerija-slides">
           <img src="slike/galerija_s1.jpeg" />
@@ -174,9 +178,12 @@
         </div>
       </section>
     </div>
-   
-    </div>
     <div class="projekti-container" id="projekti">
+      <section class="projekti-naslov">
+        <h1>Naši projekti!</h1>
+        <hr class="projekt-naslov-crta">
+      </section>
+
       <div class="projekti_slideshow-container">
         <div class="projekti_slideshow">
           <img src="slike/projekt1_s1.jpg" style="width: 100%" />
@@ -217,22 +224,43 @@
         <span class="projekti-dot" onclick="currentSlide(3)"></span>
       </section>
     </div>
+    <!--Konatki-->
     <div class="kontakt-container" id="kontakt">
-      <section class="kontakt">
+      <section class="kontakt-naslov">
         <h1>Kontaktiraj nas!</h1>
-        <hr />
-        <div class="kontakt-link">
-          <a href="mailto:info@elektrobosnjak.com">
-            <section class="mail-ikona"></section>
-            <p>info@elektrobosnjak.com</p></a
-          >
-        </div>
+        <hr class="kontakt-naslov-crta">
+      </section>
 
-        <div class="kontakt-link">
-          <a href="whatsapp://send?abid=p0916011777&text=Hello%2C%20World!">
-            <section class="mobitel-ikona"></section>
-            <p>+385 123 456 78</p></a
-          >
+      <section class="kontakt-main">
+        <div class="kontakt-kartica">
+          <a class="kontakt-kartica-link-slika" href="whatsapp:contact=0916011777@s.whatsapp.com&message='Pozdrav!'">
+            <img src="slike/whatsapp.svg" alt="Whatsapp">
+          </a>
+          
+          <h1>Whatsapp</h1>
+          <a class="kontakt-kartica-link-tekst" href="whatsapp:contact=0916011777@s.whatsapp.com&message='Pozdrav!'">
+              stisni ovjde!
+          </a>
+      
+        </div>
+        <div class="kontakt-kartica">
+          <a class="kontakt-kartica-link-slika" href="tel:+916011777">
+            <img class="" src="slike/mobitel.svg" alt="Mobitel">
+          </a>
+
+          <h1>Mobitel</h1>
+          <a class="kontakt-kartica-link-tekst" href="tel:+916011777">
+                stisni ovjde!
+          </a>
+        </div>
+        <div class="kontakt-kartica">
+          <a class="kontakt-kartica-link-slika" href="mailto:mihaelzec3@gmail.com">
+          <img src="slike/email.svg" alt="Mail">
+          </a>
+          <h1>Email</h1>
+          <a class="kontakt-kartica-link-tekst" href="mailto:mihaelzec3@gmail.com">
+                <p>stisni ovjde!</p>
+          </a>
         </div>
       </section>
     </div>
