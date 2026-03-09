@@ -647,9 +647,70 @@ button.vrh {
 footer {
   background-color: #283845;
   color: white;
-  padding: 50px 0;
   text-align: center;
+  padding-top: 50px;
 }
+.footer-main {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 30px;
+}
+
+.footer-kartica {
+  width: 40%;
+  height: 100%;
+  background-color: #333333;
+  border-radius: 10px;
+  padding: 25px 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-kartica hr {
+  border: 0;
+  height: 4px;
+  width: 60%;
+  margin: 15px auto;
+  background-color: #ff6600;
+}
+
+.footer-kartica h1 {
+  text-align: center;
+  font-size: 2rem;
+}
+
+.footer-kartica a {
+  text-decoration: none;
+  color: white;
+  font-size: 1.2rem;
+  padding: 10px 0;
+}
+
+.footer-kartica a {
+  display: inline-block;
+  transition: all 0.3s ease-in-out;
+}
+
+.footer-kartica a:hover {
+  color: #ff6600;
+  transform: translate(2px, 2px);
+  cursor: pointer;
+}
+
+.footer-copy {
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  background-color: #333333;
+  margin-top: 50px;
+  padding: 50px 0;
+  font-size: 1.2rem;
+}
+
 /*-------------------------------------------*/
 /*-------------------------------------------*/
 /*-----------Ponavljajuci elementi*----------*/
@@ -658,7 +719,7 @@ footer {
 /*--------DIV gdje se nalazi naslov----------*/
 /*-------------------------------------------*/
 /*-------------------------------------------*/
-.projekt-naslov,
+.projekti-naslov,
 .usluge-naslov,
 .galerija-naslov,
 .projekti-naslov,
@@ -984,11 +1045,22 @@ footer {
     font-size: 1.2rem;
     color: #333333;
   }
-
+  /*-------------------------------------------*/
+  /*-------------Podnozje stranice-------------*/
+  /*-------------------------------------------*/
+  .footer-kartica hr {
+    height: 3px;
+    width: 80%;
+    margin: 10px auto;
+  }
+  .footer-kartica h1 {
+    font-size: 1.5rem;
+  }
   .dobrodosli-main button {
     width: 90%;
   }
-
+  /*-------------------------------------------*/
+  /*-------------------------------------------*/
   .logo-container h1 {
     font-size: 1.5rem;
   }
@@ -1281,6 +1353,43 @@ footer {
     display: none;
   }
   /*-------------------------------------------*/
+  /*-------------Podnozje stranice-------------*/
+  /*-------------------------------------------*/
+  footer {
+    padding-top: 25px;
+  }
+  .footer-main {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .footer-kartica {
+    width: 90%;
+    height: 100%;
+    padding: 15px 0;
+  }
+  .footer-kartica hr {
+    height: 3px;
+    float: left;
+    width: 60%;
+    margin: 10px 0;
+  }
+
+  .footer-kartica h1 {
+    text-align: center;
+    font-size: 1.5rem;
+  }
+  .footer-kartica a {
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;
+    padding: 5px 0;
+  }
+  .footer-copy {
+    margin-top: 25px;
+    padding: 25px 0;
+    font-size: 1rem;
+  }
+  /*-------------------------------------------*/
   /*-------------------------------------------*/
   /*-----------Ponavljajuci elementi-----------*/
   /*-------------------------------------------*/
@@ -1295,5 +1404,13 @@ footer {
   .projekt-naslov-crta,
   .galerija-naslov-crta {
     margin: 10px 0;
+  }
+  .info-container,
+  .dobrodosli-container,
+  .projekti-container,
+  .usluge-container,
+  .kontakt-container {
+    border-bottom: 0;
+    border-top: 0;
   }
 }
