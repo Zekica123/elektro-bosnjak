@@ -1,16 +1,30 @@
 <!doctype html>
-<html lang="en">
+<html lang="hr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Elektro Bosnjak</title>
+    <title>Elektro Bošnjak | Profesionalne Elektroinstalacije i Popravci</title>
+    <meta
+      name="description"
+      content="Elektro Bošnjak nudi vrhunske elektroinstalacije za domove i poslovne prostore. Od novogradnje do hitnih popravaka i održavanja. Sigurnost i kvaliteta na prvom mjestu!"
+    />
+    <meta
+      name="keywords"
+      content="elektroinstalacije, električar, majstor za struju, Elektro Bošnjak, popravak struje, instalacije"
+    />
+    <meta name="author" content="Lovre Bošnjak, Srećko Bošnjak" />
+    <meta
+      property="og:description"
+      content="Trebate pouzdanog električara? Elektro Bošnjak nudi sigurna i moderna rješenja za vaš dom ili poslovni prostor. Provjerite naše usluge!"
+    />
+    <meta property="og:site_name" content="Elektro Bošnjak" />
     <link rel="stylesheet" href="index.css" />
     <link rel="icon" href="slike/logo_sluzbeni.jpg" />
   </head>
   <body>
-    <a href="#vrh" class="vrh">
-      <button class="vrh">▲</button>
-    </a>
+    <!---gumb za vraćanje na VRH STRANICE-->
+    <a href="#vrh" class="vrh"> ▲ </a>
+    <!--------NAVBAR------->
     <div class="navbar" id="vrh">
       <!--Sekcija s Logom i tekstom-->
       <section class="logo-container">
@@ -31,92 +45,68 @@
         <a href="#kontakt">Kontakt</a>
       </section>
     </div>
+    <!------1. DIO---------------->
+    <!----DOBRODOŠLI NA STRANICU-->
+    <!---glavni kontenjer; s pozadinskom slikom-->
     <div class="dobrodosli-container" id="pocetna">
+      <!---kontenjer s sadržajem-->
       <section class="dobrodosli-main">
-        <h2>Dobrodošli!</h2>
-        <hr class="dobrodosli_crta1" />
+        <h2>KVALITETA I POVJERENJE</h2>
         <h1>ELEKTRO BOŠNJAK</h1>
         <hr class="dobrodosli_crta2" />
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam aliquid
-          provident vitae corrupti amet. Ducimus aperiam inventore consequatur
-          iusto. Repellat temporibus quisquam, nam similique repudiandae
-          reprehenderit nisi laboriosam porro sint.
-        </p>
+        <article>
+          <p>
+            Dobrodošli na službenu web stranicu Elektro Bošnjaka! Obrt Elektro
+            Bošnjak specijaliziran je za stručno izvođenje električnih mreža,
+            sustave gromobranske zaštite te izgradnju i rekonstrukciju moderne
+            javne rasvjete. Osigurajte sigurnost i funkcionalnost vašeg objekta
+            uz radove izvedene po najvišim standardima struke.
+          </p>
+        </article>
+        <!--Kontenjer s gumbovima-->
         <section class="dobr_button-cont">
-          <a href="#info">
-            <button>Saznajte više o nama!</button>
-          </a>
-          <a href="#kontakt">
-            <button>Kontaktiraj nas!</button>
-          </a>
+          <a href="#info" id="dobr-gumb1"> Saznajte više! </a>
+          <a href="#forma" id="dobr-gumb2"> Kontaktirajte nas! </a>
         </section>
       </section>
     </div>
+    <!------2. DIO---------------->
+    <!-------INFO------->
+    <!---glavni kontenjer INFO-->
     <div class="info-container" id="info">
-      <div class="info-sadrzaj">
-        <div class="info-slika_ljevo"></div>
-        <div class="info-h1_desno">
-          <h1>O nama</h1>
-        </div>
-        <div class="info-p_desno">
-          <p>
-            Elektro Bošnjak je renomirana građevinska tvrtka s dugogodišnjim
-            iskustvom u industriji. Naša misija je pružiti vrhunske usluge i
-            kvalitetne građevinske projekte koji zadovoljavaju potrebe naših
-            klijenata. S ponosom ističemo našu stručnost, inovativnost i
-            predanost svakom projektu koji preuzimamo.
-          </p>
-        </div>
-      </div>
-      <section class="info-prazno"></section>
-      <div class="info-sadrzaj">
-        <section class="info-slika_desno"></section>
-        <section class="info-h1_lijevo">
-          <h1>Naša vizija</h1>
+      <section class="info-sadrzaj">
+        <section class="info-sadrzaj-slika">
+          <section class="slika-wrapper">
+            <img
+              src="slike/info_s1.jpeg"
+              alt="Stručno izvođenje glavnih razvodnih ormara. Slika prikazuje kompletnu instalaciju s uredno posloženim osiguračima, sklopkama i sabirnicama za maksimalnu sigurnost. Odaberite pouzdanost i vrhunsku izvedbu elektroinstalacija – odaberite Elektro Bošnjak."
+            />
+          </section>
         </section>
-        <section class="info-p_lijevo">
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla,
-            cumque. Deleniti, sint! Sed minus quia corporis vel autem similique,
-            quaerat fuga earum dolorum, velit possimus itaque inventore
-            veritatis maxime minima.
-          </p>
+        <section class="info-sadrzaj-tekst">
+          <!--Naslov H1 + HR linija ispod naslova-->
+          <section class="info-sadrzaj-tekst-header">
+            <h1>O nama</h1>
+            <hr />
+          </section>
+          <article class="info-sadrzaj-tekst-art">
+            Sigurna električna mreža i vrhunska zaštita od atmosferskih
+            pražnjenja. Od preciznih instalacija jake i slabe struje do
+            postavljanja gromobranskih sustava, Elektro Bošnjak nudi pouzdanu
+            podršku za sve vaše projekte. Stručnjaci smo u projektiranju i
+            obnovi javne rasvjete, stvarajući osvijetljene i sigurne prostore za
+            zajednicu. Stručno izvođenje elektroinstalacija, gromobrana i javne
+            rasvjete. Bez obzira trebate li napredne sustave slabe struje ili
+            robusnu infrastrukturu javne rasvjete, Elektro Bošnjak garantira
+            kvalitetnu rekonstrukciju i novu gradnju. Gradimo modernu električnu
+            budućnost uz pouzdanost na koju se možete osloniti.
+            <a href="#usluge" class="info-sadrzaj-gumb"> Usluge </a>
+          </article>
         </section>
-      </div>
-    </div>
-    <div class="galerija-container" id="galerija">
-      <section class="galerija-naslov">
-        <h1>Slike s naših projekata!</h1>
-        <hr class="galerija-naslov-crta" />
-      </section>
-      <section class="galerija-main">
-        <div class="galerija-slides">
-          <img src="slike/galerija_s1.jpeg" />
-        </div>
-
-        <div class="galerija-slides">
-          <img src="slike/galerija_s2.jpeg" />
-        </div>
-
-        <div class="galerija-slides">
-          <img src="slike/galerija_s3.jpeg" />
-        </div>
-
-        <button class="galerija-gumb lijevi" onclick="mjenjajSlide(-1)">
-          &#10094;
-        </button>
-        <button class="galerija-gumb desni" onclick="mjenjajSlide(1)">
-          &#10095;
-        </button>
-      </section>
-      <section>
-        <span class="galerija-dot aktivna" onclick="currentSlide(1)"></span>
-        <span class="galerija-dot" onclick="currentSlide(2)"></span>
-        <span class="galerija-dot" onclick="currentSlide(3)"></span>
       </section>
     </div>
-    <!--Usluge-->
+    <!----3. DIO------>
+    <!----Usluge----->
     <div class="usluge-container" id="usluge">
       <!--Naslov i crta ispod naslova-->
       <section class="usluge-naslov">
@@ -178,6 +168,38 @@
         </div>
       </section>
     </div>
+    <div class="galerija-container" id="galerija">
+      <section class="galerija-naslov">
+        <h1>Slike s naših projekata!</h1>
+        <hr class="galerija-naslov-crta" />
+      </section>
+      <section class="galerija-main">
+        <div class="galerija-slides">
+          <img src="slike/galerija_s1.jpeg" />
+        </div>
+
+        <div class="galerija-slides">
+          <img src="slike/galerija_s2.jpeg" />
+        </div>
+
+        <div class="galerija-slides">
+          <img src="slike/galerija_s3.jpeg" />
+        </div>
+
+        <button class="galerija-gumb lijevi" onclick="mjenjajSlide(-1)">
+          &#10094;
+        </button>
+        <button class="galerija-gumb desni" onclick="mjenjajSlide(1)">
+          &#10095;
+        </button>
+      </section>
+      <section>
+        <span class="galerija-dot aktivna" onclick="currentSlide(1)"></span>
+        <span class="galerija-dot" onclick="currentSlide(2)"></span>
+        <span class="galerija-dot" onclick="currentSlide(3)"></span>
+      </section>
+    </div>
+
     <div class="projekti-container" id="projekti">
       <section class="projekti-naslov">
         <h1>Naši projekti!</h1>
@@ -225,7 +247,7 @@
       </section>
     </div>
     <!--Konatki-->
-    <div class="kontakt-container" id="kontakt">
+    <!-----<div class="kontakt-container" id="kontakt">
       <section class="kontakt-naslov">
         <h1>Kontaktiraj nas!</h1>
         <hr class="kontakt-naslov-crta" />
@@ -274,10 +296,51 @@
           </a>
         </div>
       </section>
+    </div>--->
+    <!--------KONTAKT FORMA------------>
+    <div class="forma-container" id="forma">
+      <!--Kontenjer s naslovom i linijom-->
+      <section class="forma-naslov">
+        <h1>Pošaljite nam upit!</h1>
+        <hr />
+      </section>
+      <!---Glavni kontenjer s FORMOM-->
+      <section class="forma-wrapper">
+        <!---Sama FORMA-->
+        <form
+          class="forma-main"
+          id="my-form"
+          action="https://formspree.io/f/myknvjkv"
+          method="POST"
+        >
+          <section class="forma-main-lijevo">
+            <!--Label za ime-->
+            <label>
+              Vaše ime:
+              <input id="unos" type="name" name="IME" required />
+            </label>
+            <!--Label za prezime-->
+            <label>
+              Vaše prezime:
+              <input id="unos" type="surname" name="PREZIME" required />
+            </label>
+            <!--Label za EMAIL-->
+            <label>
+              Email adresa:
+              <input id="unos" type="email" name="EMAIL" required />
+            </label>
+          </section>
+          <section class="forma-main-desno">
+            <label>
+              Vaš upit!
+              <textarea id="poruka" name="upit" required></textarea>
+            </label>
+            <button class="forma-gumb" type="submit">Pošalji!</button>
+          </section>
+        </form>
+      </section>
     </div>
-    <script src="projekti_slide.js"></script>
-    <script src="galerija_slide.js"></script>
-
+    <!----FOOTER-------->
     <footer>
       <section class="footer-main">
         <div class="footer-kartica">
@@ -300,5 +363,8 @@
         <p>Izradio: Ivan Mihael Zec</p>
       </section>
     </footer>
+    <script src="formsrpee.js"></script>
+    <script src="projekti_slide.js"></script>
+    <script src="galerija_slide.js"></script>
   </body>
 </html>
