@@ -38,7 +38,7 @@ body {
   align-items: center;
   justify-content: center;
   border-radius: 50%;
-  padding: 15px 25px;
+  padding: 12.5px 12.5px;
   position: fixed;
   bottom: 20px;
   right: 20px;
@@ -252,13 +252,13 @@ body {
   margin: 10px 0;
 }
 .info-sadrzaj-tekst-art {
+  border-top-left-radius: 10px;
   display: flex;
   align-items: center;
   min-height: 80vh;
-  background-color: #f29559;
   width: 100%;
-  padding: 50px 15px;
-  color: #333333;
+  padding: 50px 25px;
+  color: white;
   font-size: 1.2rem;
   box-sizing: border-box;
   flex-wrap: wrap;
@@ -267,11 +267,11 @@ body {
 }
 .info-sadrzaj-gumb {
   margin: 20px 0;
-  background-color: #f29559;
-  border: 4px solid #333333;
+  background-color: transparent;
+  border: 4px solid #ff6600;
   text-decoration: none;
   min-width: 200px;
-  width: 80%;
+  width: 100%;
   text-align: center;
   color: white;
   font-size: 1.2rem;
@@ -283,8 +283,92 @@ body {
 .info-sadrzaj-gumb:hover {
   transform: translate(2px, 2px);
   font-weight: bold;
-  box-shadow: 0px 3px 0px 0px #000000;
+  box-shadow: 0px 3px 0px 0px #f29559;
 }
+/*-------3. DIO---------*/
+/*-------USLUGE---------*/
+.usluge-container {
+  position: relative;
+  min-height: 100vh;
+  background: url(slike/usluge_s1.jpeg);
+  background-position: center;
+  background-size: cover;
+}
+.usluge-main {
+  background-color: #333333cc;
+  width: 100%;
+  min-height: 100vh;
+  color: white;
+  padding: 50px 0;
+  display: flex;
+  flex-direction: column;
+}
+.usluge-naslov {
+  width: 100%;
+  height: 100%;
+  padding: 25px 0;
+}
+.usluge-naslov h1 {
+  font-size: 3rem;
+  text-align: center;
+  color: #ff6600;
+}
+.usluge-naslov hr {
+  width: 60%;
+  margin: 10px auto;
+  height: 4px;
+  background-color: #ff6600;
+  border: 0;
+}
+.usluge-wrapper {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+  height: 100%;
+}
+.usluge-main-kartica {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 25px 25px;
+  min-width: 30%;
+  min-height: 200px;
+  height: auto;
+  background-color: #333333;
+  border-radius: 10px;
+  border-bottom: 4px solid #ff6600;
+  box-shadow: 0 4px 15px black;
+  text-align: center;
+}
+.kartica-slika {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin: 10px 0;
+}
+.kartica-slika img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.usluge-main-kartica h3 {
+  font-size: 1.5rem;
+
+  text-decoration: underline;
+  color: #ff6600;
+  padding: 15px 0;
+}
+.usluge-main-kartica-p {
+  width: 100%;
+  padding: 25px 50px;
+  font-size: 1.2rem;
+  color: #333333;
+}
+
 .galerija-naslov {
   width: 100%;
   height: auto;
@@ -293,7 +377,6 @@ body {
   color: #ff6600;
   font-size: 2rem;
 }
-
 .galerija-naslov-crta {
   width: 60%;
   height: 4px;
@@ -301,7 +384,6 @@ body {
   border: 0;
   margin: 15px auto 15px auto;
 }
-
 .galerija-container {
   display: flex;
   align-items: center;
@@ -385,74 +467,6 @@ body {
 
 .desni {
   right: 30px;
-}
-
-.usluge-container {
-  position: relative;
-  width: 100%;
-  min-height: 100vh;
-  height: auto;
-  background-color: #333333;
-  padding: 100px 0;
-  border-bottom: 4px solid #ff6600;
-}
-
-.usluge-naslov {
-  width: 100%;
-  height: auto;
-  padding: 50px 0;
-  text-align: center;
-  color: #ff6600;
-  font-size: 2rem;
-}
-
-.usluge-naslov-crta {
-  width: 60%;
-  height: 4px;
-  background-color: #ff6600;
-  border: 0;
-  margin: 15px auto 15px auto;
-}
-
-.usluge-main {
-  display: flex;
-  flex-direction: row;
-  width: 90%;
-  height: 100%;
-  margin: 50px auto;
-  gap: 20px;
-}
-
-.usluge-main-kartica {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  flex: 40%;
-  min-height: 200px;
-  height: auto;
-  background-color: #f29559;
-  border-radius: 10px;
-  border: 4px solid #ff6600;
-  box-shadow: 0 4px 15px black;
-  text-align: center;
-}
-
-.usluge-main-kartica img {
-  width: 100px;
-  height: 100px;
-  margin: 20px 0;
-}
-
-.usluge-main-kartica-p {
-  width: 100%;
-  padding: 25px 50px;
-  font-size: 1.2rem;
-  color: #333333;
-}
-
-.usluge-main-kartica:hover {
-  box-shadow: 0 4px 15px #f29559;
-  transition: 0.3s;
 }
 
 .projekti-container {
@@ -945,6 +959,8 @@ footer {
   }
   .info-sadrzaj-slika {
     width: 90%;
+    min-height: 100px;
+    padding: 25px 0;
   }
   .slika-wrapper {
     width: 100%;
@@ -987,41 +1003,67 @@ footer {
     min-width: 200px;
     padding: 15px 15px;
   }
-  /*-------------------------------------------*/
-  /*4. dio -----Usluge------------*/
+  /*-------3. DIO---------*/
+  /*-------USLUGE---------*/
   .usluge-container {
-    min-height: 200px;
-    height: auto;
-    padding: 50px 0;
-  }
-  .usluge-naslov {
-    padding: 25px 0;
-    color: #ff6600;
-    font-size: 1.5rem;
-  }
-  .usluge-naslov-crta {
-    margin: 15px 0;
+    position: relative;
+    min-height: 100vh;
+    background: url(slike/usluge_s1.jpeg);
+    background-position: center;
+    background-size: cover;
   }
   .usluge-main {
+    background-color: #333333cc;
+    width: 100%;
+    min-height: 100vh;
+    color: white;
+    padding: 25px 0;
+    display: flex;
+    flex-direction: column;
+  }
+  .usluge-naslov {
+    padding: 20px 0;
+  }
+  .usluge-naslov h1 {
+    font-size: 2.5rem;
+  }
+  .usluge-naslov hr {
     width: 80%;
-    margin: 25px auto;
-    gap: 15px;
+    height: 3px;
+  }
+  .usluge-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    padding: 20px 50px;
+    scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
   }
   .usluge-main-kartica {
-    width: 50%;
+    display: inline-block;
+    vertical-align: top;
+    white-space: normal;
+    width: 40%;
+    min-width: 300px;
+    min-height: 400px;
+    margin-right: 30px;
+    padding: 20px;
+    border-radius: 20px;
+    transition: 0.4s;
+    scroll-snap-align: center;
   }
-  .usluge-main-kartica img {
-    width: 70px;
-    height: 70px;
-    margin: 15px 0;
+  .kartica-slika {
+    margin: 10px auto;
+    width: 80px;
+    height: 80px;
+  }
+  .usluge-main-kartica h3 {
+    padding: 10px 0;
+    font-size: 1.3rem;
   }
   .usluge-main-kartica-p {
-    width: 100%;
-    padding: 15px 25px;
-    font-size: 1rem;
-    color: #333333;
-  }
-  .usluge-main-kartica h2 {
+    padding: 20px 25px;
     font-size: 1.2rem;
   }
   /*-------------------------------------------*/
@@ -1247,7 +1289,6 @@ footer {
   /*-------------------------------------------*/
   /*-------------------------------------------*/
 }
-
 @media (max-width: 500px) {
   /*1. navbar*/
   .logo-container img {
@@ -1304,14 +1345,18 @@ footer {
   }
   .dobr_button-cont a {
     width: 100%;
+    min-width: 10px;
     font-size: 1rem;
     padding: 15px 15px;
   }
   /*--------2. DIO-------*/
   /*-------INFO----------*/
   .info-sadrzaj {
+    min-height: 100px;
     border-bottom: 0;
     padding-left: 0;
+    align-items: center;
+    justify-content: center;
   }
   .info-sadrzaj-slika {
     display: none;
@@ -1320,8 +1365,10 @@ footer {
   .info-sadrzaj-tekst {
     width: 100%;
     margin: 0;
+    align-items: center;
+    justify-content: center;
   }
-  .info-sadrzaj-tekst-header{
+  .info-sadrzaj-tekst-header {
     padding: 25px 0;
   }
   .info-sadrzaj-tekst-header h1 {
@@ -1341,6 +1388,7 @@ footer {
   }
   .info-sadrzaj-gumb {
     width: 100%;
+    min-width: 10px;
     font-size: 1rem;
     border: 3px solid #ff6600;
   }
@@ -1351,33 +1399,51 @@ footer {
   }
   /*-------------------------------------------*/
   /*4. dio ----- Usluge------------*/
-  .usluge-container {
-    padding: 25px 0;
-  }
   .usluge-naslov {
-    font-size: 1.2rem;
+    padding: 15px 0;
   }
-  .usluge-naslov-crta {
+  .usluge-naslov h1 {
+    font-size: 2rem;
+    font-style: italic;
+    color: white;
+  }
+  .usluge-naslov hr {
+    width: 50%;
+    height: 3px;
     margin: 10px 0;
   }
-  .usluge-main {
+  .usluge-wrapper {
     width: 90%;
-    margin: 25px auto;
+    margin: 10px auto;
+    padding: 0;
+    display: flex;
     flex-direction: column;
-    gap: 10px;
+    flex-wrap: nowrap;
+    overflow-x: unset;
+    overflow-y: unset;
+    white-space: unset;
+    scroll-snap-type: unset;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
   }
   .usluge-main-kartica {
+    display: flex;
+    flex-shrink: unset;
     width: 100%;
+    min-width: unset;
+    min-height: 100px;
+    margin: 0;
+    padding: 15px;
   }
-  .usluge-main-kartica img {
-    width: 50px;
-    height: 50px;
-    margin: 10px 0;
+  .usluge-main-kartica h3 {
+    padding: 10px 0;
+    font-size: 1.2rem;
   }
   .usluge-main-kartica-p {
+    padding: 15x 15px;
     font-size: 1rem;
   }
-
   /*5. dio ------ Galerija*/
   .galerija-container {
     min-height: 200px;
