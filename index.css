@@ -37,15 +37,15 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 50%;
-  padding: 12.5px 12.5px;
+  border-radius: 10px;
+  padding: 15px;
   position: fixed;
   bottom: 20px;
   right: 20px;
   background-color: transparent;
-  border: 3px solid #ff6600;
+  border: 4px solid #ff6600;
   color: white;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   z-index: 1000;
   transition: all 0.3s ease-in-out;
   text-decoration: none;
@@ -290,9 +290,11 @@ body {
 .usluge-container {
   position: relative;
   min-height: 100vh;
+  width: 100%;
   background: url(slike/usluge_s1.jpeg);
   background-position: center;
   background-size: cover;
+  border-bottom: 4px solid #ff6600;
 }
 .usluge-main {
   background-color: #333333cc;
@@ -341,6 +343,8 @@ body {
   border-bottom: 4px solid #ff6600;
   box-shadow: 0 4px 15px black;
   text-align: center;
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
 }
 .kartica-slika {
   width: 100px;
@@ -368,21 +372,33 @@ body {
   font-size: 1.2rem;
   color: #333333;
 }
-
+.usluge-main-kartica:hover {
+  transform: translate(5px, 5px);
+}
+/*---4. DIO-------*/
+/*---GALERIJA------*/
+.galerija-container {
+  position: relative;
+  min-height: 100vh;
+  border-bottom: 4px solid #ff6600;
+  width: 100%;
+}
 .galerija-naslov {
   width: 100%;
-  height: auto;
-  padding: 50px 0;
+  height: 100%;
+  padding: 25px 0;
+}
+.galerija-naslov h1 {
+  font-size: 3rem;
   text-align: center;
   color: #ff6600;
-  font-size: 2rem;
 }
-.galerija-naslov-crta {
+.galerija-naslov hr {
   width: 60%;
+  margin: 10px auto;
   height: 4px;
   background-color: #ff6600;
   border: 0;
-  margin: 15px auto 15px auto;
 }
 .galerija-container {
   display: flex;
@@ -394,54 +410,33 @@ body {
   min-height: 100vh;
   height: auto;
 }
-
 .galerija-main {
   position: relative;
   width: 90%;
   margin: 50px auto 25px auto;
-  height: 500px;
+  height: 100%;
   border-radius: 10px;
   background-color: #f29559;
   border: 4px solid #ff6600;
   box-shadow: 4px 4px 15px #000000;
 }
-
-.galerija-main:hover {
-  box-shadow: 4px 4px 15px #f29559;
-  transition: 0.3s;
-}
-
-.galerija-dot {
-  display: inline-block;
-  width: 15px;
-  height: 15px;
-  margin: 0 10px 50px 10px;
-  background-color: #ff6600;
-  border-radius: 50%;
-  cursor: pointer;
-  transition: all 0.3s ease-in-out;
-}
-
 .galerija-dot.aktivna {
   background-color: #ff6600;
   border-radius: 10px;
   width: 30px;
 }
-
-.galerija-container img {
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
-}
-
 .galerija-slides {
-  height: 100%;
+  height: 500px;
   width: 100%;
-  display: none;
-  animation-name: fade;
-  animation-duration: 1.5s;
+  overflow: hidden;
+  border-radius: 10px;
+  cursor: pointer;
 }
-
+.galerija-slides img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 .galerija-gumb {
   cursor: pointer;
   border-radius: 10px;
@@ -454,129 +449,120 @@ body {
   font-size: 20px;
   border: 0px;
 }
-
 .galerija-gumb:hover {
   background-color: white;
   color: #ff6600;
   transition: 0.3s;
 }
-
 .lijevi {
   left: 30px;
 }
-
 .desni {
   right: 30px;
 }
-
-.projekti-container {
+.galerija-tocke-container {
+  width: 100%;
+  padding: 50px 0;
   display: flex;
-  align-items: center;
-  flex-direction: column;
+  align-content: center;
   justify-content: center;
-  position: relative;
-  width: 100%;
-  min-height: 100vh;
-  height: auto;
-  border-bottom: 4px solid #ff6600;
+  gap: 20px;
 }
-
-.projekti_slideshow-container {
-  position: relative;
-  width: 90%;
-  margin: 50px auto 25px auto;
-  height: 500px;
-  border-radius: 10px;
-  background-color: #f29559;
-  border: 4px solid #ff6600;
-  box-shadow: 4px 4px 15px #000000;
-}
-
-.projekti_slideshow {
-  height: 100%;
-  width: 100%;
-  display: none;
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-
-.projekti_slideshow_tekst {
-  width: 100%;
-  min-height: 20%;
-  height: auto;
-  position: absolute;
-  bottom: 0;
-  background-color: white;
-  text-align: center;
-}
-
-.projekti_slideshow_tekst h1 {
-  font-size: 1.5rem;
-  font-weight: bold;
-  width: 100%;
-  padding: 20px 0;
-  background-color: #333333;
-  color: white;
-}
-
-.projekti_slideshow_tekst p {
-  font-size: 1.2rem;
-  padding: 15px;
-}
-
-.projekti_slideshow img {
-  object-fit: cover;
-  width: 100%;
-  height: 80%;
-}
-
-.projekti_slideshow-container:hover {
-  box-shadow: 4px 4px 15px #f29559;
-  transition: 0.3s;
-}
-
-.projekt-gumb {
-  cursor: pointer;
-  border-radius: 10px;
-  padding: 10px 50px;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: #ff6600;
-  color: white;
-  font-size: 20px;
-  border: 0px;
-}
-
-.prije:hover,
-.poslije:hover {
-  background-color: #333333;
-  transition: 0.3s;
-}
-
-.prije {
-  left: 30px;
-}
-
-.poslije {
-  right: 30px;
-}
-
-.projekti-dot {
+.galerija-dot {
   display: inline-block;
   width: 15px;
   height: 15px;
-  margin: 0 10px 50px 10px;
   background-color: #ff6600;
   border-radius: 50%;
   cursor: pointer;
   transition: all 0.3s ease-in-out;
 }
-
-.projekti-dot.aktivna {
+/*---5. DIO-------*/
+/*---PROJEKTI-----*/
+/*----------------*/
+.projekti-container {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  border-bottom: 4px solid #ff6600;
+}
+.projekti-naslov {
+  width: 100%;
+  height: 100%;
+  padding: 25px 0;
+}
+.projekti-naslov h1 {
+  font-size: 3rem;
+  text-align: center;
+  color: #ff6600;
+}
+.projekti-naslov hr {
+  width: 60%;
+  margin: 10px auto;
+  height: 4px;
   background-color: #ff6600;
+  border: 0;
+}
+.projekti-main {
+  width: 100%;
+  position: relative;
+  padding-bottom: 25px;
+  margin-bottom: 50px;
+  background-color: red;
+  height: 100%;
   border-radius: 10px;
-  width: 30px;
+  background-color: #333;
+  overflow: auto;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.projekti-kartica {
+  display: inline-block;
+  border-radius: 15px;
+  width: 40%;
+  min-height: 300px;
+  margin: 25px 25px;
+  background-color: white;
+  border-bottom: 4px solid #ff6600;
+  overflow: hidden;
+}
+.projekti-slika {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  object-position:center;
+}
+.projekti-slika img {
+  width: 100%;
+  height: 100%;
+}
+.projekti-naziv {
+  width: 100%;
+  padding: 25px 25px;
+  text-align: center;
+  background-color: #283845;
+}
+.projekti-naziv h2 {
+  font-size: 2rem;
+  color: #ff6600;
+  text-align: center;
+}
+.projekti-lokacija {
+  width: 100%;
+  padding: 25px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+}
+.projekti-lokacija h3{
+  font-size: 1.5rem;
+  color: #333333;
+  text-align: center;
+}
+.projekti-lokacija img{
+  width: 50px;
+  height: 50px;
 }
 
 .kontakt-container {
@@ -953,6 +939,9 @@ footer {
   .dobr_button-cont a {
     width: 80%;
   }
+  .info-container {
+    border-bottom: 0;
+  }
   .info-sadrzaj {
     flex-direction: column;
     padding-left: 5%;
@@ -1011,6 +1000,8 @@ footer {
     background: url(slike/usluge_s1.jpeg);
     background-position: center;
     background-size: cover;
+    border-bottom: 0;
+    border-top: 0;
   }
   .usluge-main {
     background-color: #333333cc;
@@ -1066,47 +1057,40 @@ footer {
     padding: 20px 25px;
     font-size: 1.2rem;
   }
-  /*-------------------------------------------*/
-  /*5. dio ----- Galerija------------*/
-
+  /*-----------------------------------*/
+  /*---------4. DIO--------------------*/
+  /*--------GALERIJA-------------------*/
   .galerija-naslov {
-    width: 100%;
-    height: auto;
-    padding: 50px 0;
-    text-align: center;
-    color: #ff6600;
-    font-size: 2rem;
+    padding: 20px 0;
   }
-
-  .galerija-naslov-crta {
-    width: 60%;
-    height: 4px;
-    background-color: #ff6600;
-    border: 0;
-    margin: 15px auto 15px auto;
+  .galerija-naslov h1 {
+    font-size: 2.5rem;
   }
-  .galerija-container {
-    border-top: 4px solid #ff6600;
+  .galerija-naslov hr {
+    width: 80%;
+    height: 3px;
   }
   .galerija-main {
-    width: 80%;
-    margin: 25px auto 15px auto;
+    margin: 25px auto;
+    border: 3px solid #ff6600;
   }
-
-  .galerija-dot {
-    margin: 0 5px 25px 5px;
-  }
-
   .galerija-gumb {
-    font-size: 15px;
+    padding: 10px 25px;
   }
-
   .lijevi {
-    left: 5px;
+    left: 15px;
   }
-
   .desni {
-    right: 5px;
+    right: 15px;
+  }
+  .galerija-tocke-container {
+    padding: 25px 0;
+    gap: 15px;
+  }
+  .galerija-dot.aktivna {
+    background-color: #ff6600;
+    border-radius: 10px;
+    width: 25px;
   }
   /*-------------------------------------------*/
   /*5. dio ----- Projekti------------*/
@@ -1398,7 +1382,7 @@ footer {
     box-shadow: 0px 3px 0px 0px #000000;
   }
   /*-------------------------------------------*/
-  /*4. dio ----- Usluge------------*/
+  /*3. dio ----- Usluge------------*/
   .usluge-naslov {
     padding: 15px 0;
   }
@@ -1444,39 +1428,70 @@ footer {
     padding: 15x 15px;
     font-size: 1rem;
   }
-  /*5. dio ------ Galerija*/
+  .usluge-main-kartica:hover {
+    transform: translate(2px, 5px);
+  }
+  /*----------------------*/
+  /*-------4. DIO---------*/
+  /*------GALERIJA--------*/
+  /*----------------------*/
   .galerija-container {
     min-height: 200px;
     height: auto;
-    border-top: 4px solid #ff6600;
+    border-top: 0;
+  }
+  .galerija-naslov {
+    padding: 15px 0;
+  }
+  .galerija-naslov h1 {
+    font-size: 2rem;
+    padding: 0 15px;
+    font-style: italic;
+    color: white;
+  }
+  .galerija-naslov hr {
+    width: 50%;
+    height: 3px;
+    float: right;
   }
   .galerija-main {
     height: 500px;
+    overflow: hidden;
     width: 90%;
     margin: 25px auto 25px auto;
     position: relative;
   }
-  .galerija-dot {
-    display: none;
-    clear: both;
-  }
   .galerija-gumb {
     top: auto;
     font-size: 30px;
-    width: 100%;
+    width: 50%;
     height: 50px;
-    border-radius: 0;
     transform: none;
   }
   .lijevi {
-    left: 0;
+    left: 25%;
     top: 0;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 20px;
+    border-bottom-left-radius: 20px;
   }
   .desni {
-    right: 0;
+    right: 25%;
     bottom: 0;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
   }
-
+  .galerija-tocke-container {
+    display: none;
+    clear: both;
+  }
+  /*----------------------*/
+  /*-------5. DIO---------*/
+  /*------PROJEKTI--------*/
+  /*----------------------*/
   .projekti-container {
     min-height: 200px;
     height: auto;
