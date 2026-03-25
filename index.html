@@ -23,7 +23,7 @@
   </head>
   <body>
     <!---gumb za vraćanje na VRH STRANICE-->
-    <a href="#vrh" class="vrh"> ▲ </a>
+    <a href="#vrh" class="vrh">▲</a>
     <!--------NAVBAR------->
     <div class="navbar" id="vrh">
       <!--Sekcija s Logom i tekstom-->
@@ -44,6 +44,22 @@
         <a href="#projekti">Projekti</a>
         <a href="#kontakt">Kontakt</a>
       </section>
+    </div>
+    <!---DONJA NAVIGACIJA S KONTAKTIMA, PRIKAZUJE SE KAD
+    ---- JE SIRINA MANJA OD 500px---------------------->
+    <div class="donji-nav">
+      <a class="donji-nav-kartica" href="">
+        <img src="slike/whatsapp.svg" alt="Logo za whatsapp" />
+      </a>
+      <a class="donji-nav-kartica" href="">
+        <img src="slike/mobilni.svg" alt="Logo za mobilni" />
+      </a>
+      <a class="donji-nav-kartica" href="">
+        <img src="slike/mail.svg" alt="Logo za mail" />
+      </a>
+      <a id="vrh_stranice" class="donji-nav-kartica" href="#vrh">
+        <img src="slike/vrh.svg" alt="Logo/gumb za vraćanje na vrh stranice" />
+      </a>
     </div>
     <!------1. DIO---------------->
     <!----DOBRODOŠLI NA STRANICU-->
@@ -237,67 +253,70 @@
         <h1>Naši projekti!</h1>
         <hr />
       </section>
+      <!---Glavni kontenjer -->
       <section class="projekti-main">
-        <div class="projekti-kartica">
-          <section class="projekti-slika">
-            <img src="slike/projekti_s1.jpeg" alt="" />
-          </section>
-          <section class="projekti-naziv">
-            <h2>Vila lady stone</h2>
-          </section>
-          <section class="projekti-lokacija">
-            <img src="slike/projekti_ikona.svg" alt="" />
-            <h3>Lovreć</h3>
-          </section>
-        </div>
-        <div class="projekti-kartica">
-          <section class="projekti-slika">
-            <img src="slike/projekti_s2.jpeg" alt="" />
-          </section>
-          <section class="projekti-naziv">
-            <h2>2 stambene zgrade - Brezinščak</h2>
-          </section>
-          <section class="projekti-lokacija">
-            <img src="slike/projekti_ikona.svg" alt="" />
-            <h3>Zagreb</h3>
-          </section>
-        </div>
-        <div class="projekti-kartica">
-          <section class="projekti-slika">
-            <img src="slike/projekti_s3.jpeg" alt="" />
-          </section>
-          <section class="projekti-naziv">
-            <h2>Vila Lagom</h2>
-          </section>
-          <section class="projekti-lokacija">
-            <img src="slike/projekti_ikona.svg" alt="" />
-            <h3>Klis</h3>
-          </section>
-        </div>
-        <div class="projekti-kartica">
-          <section class="projekti-slika">
-            <img src="slike/projekti_s4.jpeg" alt="" />
-          </section>
-          <section class="projekti-naziv">
-            <h2>Pivac</h2>
-          </section>
-          <section class="projekti-lokacija">
-            <img src="slike/projekti_ikona.svg" alt="" />
-            <h3>objekti Petrinja i Lekenik</h3>
-          </section>
-        </div>
-        <div class="projekti-kartica">
-          <section class="projekti-slika">
-            <img src="slike/projekti_s5.jpeg" alt="" />
-          </section>
-          <section class="projekti-naziv">
-            <h2>Stambena zgrada - 20 stanova </h2>
-          </section>
-          <section class="projekti-lokacija">
-            <img src="slike/projekti_ikona.svg" alt="" />
-            <h3>Horvatova ulica, Zagreb</h3>
-          </section>
-        </div>
+        <section class="projekti-wrapper">
+          <!-------1. PROJEKT------->
+          <!-----                 -->
+          <div class="projekti-kartica">
+            <section class="projekti-slika">
+              <img src="slike/projekti_s2.jpeg" alt="" />
+            </section>
+            <h2>Stambene zgrade - Brezinščak</h2>
+            <section class="projekti-lokacija">
+              <img src="slike/projekti_ikona.svg" alt="" />
+              Zagreb
+            </section>
+          </div>
+          <!-------2. PROJEKT------->
+          <!-----                 -->
+          <div class="projekti-kartica">
+            <section class="projekti-slika">
+              <img src="slike/projekti_s2.jpeg" alt="" />
+            </section>
+            <h2>Stambene zgrade - Brezinščak</h2>
+            <section class="projekti-lokacija">
+              <img src="slike/projekti_ikona.svg" alt="" />
+              Zagreb
+            </section>
+          </div>
+          <!-------3. PROJEKT------->
+          <!-----                 -->
+          <div class="projekti-kartica">
+            <section class="projekti-slika">
+              <img src="slike/projekti_s2.jpeg" alt="" />
+            </section>
+            <h2>Stambene zgrade - Brezinščak</h2>
+            <section class="projekti-lokacija">
+              <img src="slike/projekti_ikona.svg" alt="" />
+              Zagreb
+            </section>
+          </div>
+          <!-------4. PROJEKT------->
+          <!-----                 -->
+          <div class="projekti-kartica">
+            <section class="projekti-slika">
+              <img src="slike/projekti_s2.jpeg" alt="" />
+            </section>
+            <h2>Stambene zgrade - Brezinščak</h2>
+            <section class="projekti-lokacija">
+              <img src="slike/projekti_ikona.svg" alt="" />
+              Zagreb
+            </section>
+          </div>
+          <!-------5. PROJEKT------->
+          <!-----                 -->
+          <div class="projekti-kartica">
+            <section class="projekti-slika">
+              <img src="slike/projekti_s2.jpeg" alt="" />
+            </section>
+            <h2>Stambene zgrade - Brezinščak</h2>
+            <section class="projekti-lokacija">
+              <img src="slike/projekti_ikona.svg" alt="" />
+              Zagreb
+            </section>
+          </div>
+        </section>
       </section>
     </div>
     <!--Konatki-->
