@@ -42,7 +42,7 @@
         <a href="#usluge">Usluge</a>
         <a href="#galerija">Galerija</a>
         <a href="#projekti">Projekti</a>
-        <a href="#kontakt">Kontakt</a>
+        <a href="#forma">Kontakt</a>
       </section>
     </div>
     <!---DONJA NAVIGACIJA S KONTAKTIMA, PRIKAZUJE SE KAD
@@ -256,64 +256,89 @@
       <!---Glavni kontenjer -->
       <section class="projekti-main">
         <section class="projekti-wrapper">
-          <!-------1. PROJEKT------->
-          <!-----                 -->
+          <!-------1. PROJEKT------------------>
+          <!-----STAMBENE ZGRADE - BREZINŠČAK-->
           <div class="projekti-kartica">
             <section class="projekti-slika">
-              <img src="slike/projekti_s2.jpeg" alt="" />
+              <img
+                src="slike/projekti_s1.jpeg"
+                alt="Villa Lady Stone koja se nalazi u Lovreću"
+              />
             </section>
-            <h2>Stambene zgrade - Brezinščak</h2>
+            <section class="projekti-naziv">Villa Lady Stone</section>
             <section class="projekti-lokacija">
-              <img src="slike/projekti_ikona.svg" alt="" />
-              Zagreb
+              <img
+                src="slike/projekti_ikona.svg"
+                alt="Logo za lokaciju, Lovreć"
+              />Lovreć
             </section>
           </div>
-          <!-------2. PROJEKT------->
-          <!-----                 -->
+          <!-------2. PROJEKT------------------>
+          <!-----VILLA LADY STONE-LOVREĆ------->
           <div class="projekti-kartica">
             <section class="projekti-slika">
-              <img src="slike/projekti_s2.jpeg" alt="" />
+              <img
+                src="slike/projekti_s2.jpeg"
+                alt="Villa Lady Stone koja se nalazi u Lovreću"
+              />
             </section>
-            <h2>Stambene zgrade - Brezinščak</h2>
+            <section class="projekti-naziv">Stambene zgrade</section>
             <section class="projekti-lokacija">
-              <img src="slike/projekti_ikona.svg" alt="" />
-              Zagreb
+              <img
+                src="slike/projekti_ikona.svg"
+                alt="Logo za lokaciju, Zagreb"
+              />Brezinščak, Zagreb
             </section>
           </div>
-          <!-------3. PROJEKT------->
-          <!-----                 -->
+          <!-------3. PROJEKT------------------>
+          <!-----VILLA LAGOM-KLIS-------------->
           <div class="projekti-kartica">
             <section class="projekti-slika">
-              <img src="slike/projekti_s2.jpeg" alt="" />
+              <img
+                src="slike/projekti_s3.jpeg"
+                alt="Villa Lagom koja se nalazi na Klisu"
+              />
             </section>
-            <h2>Stambene zgrade - Brezinščak</h2>
+            <section class="projekti-naziv">Vila Lagom</section>
             <section class="projekti-lokacija">
-              <img src="slike/projekti_ikona.svg" alt="" />
-              Zagreb
+              <img
+                src="slike/projekti_ikona.svg"
+                alt="Logo za lokaciju, Lovreć"
+              />Klis
             </section>
           </div>
-          <!-------4. PROJEKT------->
-          <!-----                 -->
+          <!-------4. PROJEKT------------------>
+          <!--------PIVAC---------------------->
           <div class="projekti-kartica">
             <section class="projekti-slika">
-              <img src="slike/projekti_s2.jpeg" alt="" />
+              <img
+                src="slike/projekti_s4.jpeg"
+                alt="Objekti Pivac na lokacijama Petrinja i Lekenik"
+              />
             </section>
-            <h2>Stambene zgrade - Brezinščak</h2>
+            <section class="projekti-naziv">Pivac Vrgorac</section>
             <section class="projekti-lokacija">
-              <img src="slike/projekti_ikona.svg" alt="" />
-              Zagreb
+              <img
+                src="slike/projekti_ikona.svg"
+                alt="Logo za lokacije, Petrinja i Lekenik"
+              />Petrinja i Lekenik
             </section>
           </div>
-          <!-------5. PROJEKT------->
-          <!-----                 -->
+          <!-------5. PROJEKT------------------>
+          <!--STAMBENE ZGRADE-HORVATOVA ULICA-->
           <div class="projekti-kartica">
             <section class="projekti-slika">
-              <img src="slike/projekti_s2.jpeg" alt="" />
+              <img
+                src="slike/projekti_s5.jpeg"
+                alt="Stambene zgrade od 20 stanova, Horvatova ulica - Zagreb"
+              />
             </section>
-            <h2>Stambene zgrade - Brezinščak</h2>
+            <section class="projekti-naziv">Stambene zgrade</section>
             <section class="projekti-lokacija">
-              <img src="slike/projekti_ikona.svg" alt="" />
-              Zagreb
+              <img
+                src="slike/projekti_ikona.svg"
+                alt="Logo za lokacije, Horvatova ulica - Zagreb"
+              />Horvatova ulica, Zagreb
             </section>
           </div>
         </section>
@@ -372,45 +397,46 @@
     </div>--->
     <!--------KONTAKT FORMA------------>
     <div class="forma-container" id="forma">
-      <!--Kontenjer s naslovom i linijom-->
-      <section class="forma-naslov">
-        <h1>Pošaljite nam upit!</h1>
-        <hr />
-      </section>
-      <!---Glavni kontenjer s FORMOM-->
-      <section class="forma-wrapper">
-        <!---Sama FORMA-->
-        <form
-          class="forma-main"
-          id="my-form"
-          action="https://formspree.io/f/myknvjkv"
-          method="POST"
-        >
-          <section class="forma-main-lijevo">
-            <!--Label za ime-->
-            <label>
-              Vaše ime:
-              <input id="unos" type="name" name="IME" required />
-            </label>
-            <!--Label za prezime-->
-            <label>
-              Vaše prezime:
-              <input id="unos" type="surname" name="PREZIME" required />
-            </label>
-            <!--Label za EMAIL-->
-            <label>
-              Email adresa:
-              <input id="unos" type="email" name="EMAIL" required />
-            </label>
-          </section>
-          <section class="forma-main-desno">
-            <label>
-              Vaš upit!
-              <textarea id="poruka" name="upit" required></textarea>
-            </label>
-            <button class="forma-gumb" type="submit">Pošalji!</button>
-          </section>
-        </form>
+      <section class="forma-main">
+        <div class="forma-naslov">
+          <h1>Kontaktiraj nas!</h1>
+          <hr />
+        </div>
+        <div class="forma-wrapper">
+          <form
+            id="mojaForma"
+            action="https://formspree.io/f/myknvjkv"
+            method="POST"
+          >
+            <!----OVJDE SE UNOSI IME I PREZIME-->
+            <section class="forma-prvi">
+              <input
+                id="unos"
+                placeholder="Unesite vaše ime"
+                type="name"
+                name="IME"
+                required
+              />
+              <input
+                id="unos"
+                placeholder="Unesite vaše prezime"
+                type="surname"
+                name="PREZIME"
+                required
+              />
+            </section>
+            <!---OVJDE SE UNOSI SAMA PORUKA----->
+            <section class="forma-drugi">
+              <textarea
+                placeholder="Unesite vašu poruku!"
+                id="upit"
+                name="Poruka"
+                required
+              ></textarea>
+              <button class="forma-gumb" type="submit">Pošalji!</button>
+            </section>
+          </form>
+        </div>
       </section>
     </div>
     <!----FOOTER-------->
@@ -438,8 +464,6 @@
     </footer>
     <!--Ovdje se nalaze sve JAVASCRIPT DOKUMENTI:-->
     <!---Za FORMU-->
-    <script src="formsrpee.js"></script>
-    <!--Za Galeriju-->
     <script src="projekti_slide.js"></script>
     <script src="galerija_slide.js"></script>
   </body>

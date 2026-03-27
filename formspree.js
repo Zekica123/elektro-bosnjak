@@ -1,27 +1,29 @@
+const forma = document.getElementById("moja-forma");
+const skocniProzor = document.getElementById("skocni-prozor-omotac");
 
-  var form = document.getElementById("my-form");
+// Funkcija za zatvaranje prozora
+function zatvoriProzor() {
+  skocniProzor.style.display = "none";
+}
+
+forma.addEventListener("submit", async function(event) {
+  event.preventDefault(); // Zaustavlja redirect
   
-  async function handleSubmit(event) {
-    event.preventDefault();
-    var status = document.getElementById("status");
-    var data = new FormData(event.target);
-    
-    fetch(event.target.action, {
-      method: form.method,
-      body: data,
-      headers: {
-          'Accept': 'application/json'
-      }
-    }).then(response => {
-      if (response.ok) {
-        status.innerHTML = "Hvala! Poruka je poslana.";
-        form.reset(); // Čisti formu nakon slanja
-      } else {
-        status.innerHTML = "Ups! Došlo je do problema.";
-      }
-    }).catch(error => {
-      status.innerHTML = "Ups! Došlo je do problema prilikom slanja.";
-    });
-  }
+  const podaci = new FormData(event.target);
   
-  form.addEventListener("submit", handleSubmit)
+  fetch(event.target.action, {
+    method: forma.method,
+    body: podaci,
+    headers: { 'Accept': 'application/json' }
+  }).then(odgovor => {
+    if (odgovor.ok) {
+      // Prikaži skočni prozor
+      skocniProzor.style.display = "flex"; 
+      forma.reset(); // Isprazni polja forme
+    } else {
+      alert("Ups! Došlo je do problema pri slanju.");
+    }
+  }).catch(greška => {
+    alert("Greška: Nije moguće poslati poruku. Provjerite internetsku vezu.");
+  });
+});

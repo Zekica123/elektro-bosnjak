@@ -542,29 +542,44 @@ body {
   overflow: auto;
   cursor: pointer;
 }
+.projekti-main::-webkit-scrollbar {
+  height: 8px;
+}
+.projekti-main::-webkit-scrollbar-track {
+  background: #808080;
+  border-radius: 10px;
+}
+.projekti-main::-webkit-scrollbar-thumb {
+  background: #ff6600;
+  border-radius: 10px;
+}
+.projekti-main::-webkit-scrollbar-thumb:hover {
+  background: #f29559;
+}
 .projekti-main:active {
   cursor: grabbing;
 }
 .projekti-wrapper {
   width: 100%;
+  margin-bottom: 50px;
+  padding-left: 25px;
   display: flex;
   gap: 50px;
   flex-direction: row;
 }
 .projekti-kartica {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  min-width: 30%;
+  min-width: 40%;
   min-height: 100px;
   height: auto;
   border-radius: 10px;
   border-bottom: 4px solid #ff6600;
+  background-color: #283845;
   text-align: center;
   overflow: hidden;
   user-select: none;
   -webkit-user-select: none;
   -ms-user-select: none;
+  transition: all 0.3s ease-in-out;
 }
 .projekti-slika {
   width: 100%;
@@ -574,20 +589,27 @@ body {
 .projekti-slika img {
   width: 100%;
   height: 100%;
+  user-select: none;
   object-fit: cover;
   object-position: center;
 }
-.projekti-kartica h2 {
-  font-size: 2rem;
+.projekti-naziv {
+  min-height: 120px;
+  padding: 10px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  text-align: center;
+  font-size: 1.8rem;
+  line-height: 1.5;
+  font-weight: bold;
   color: #ff6600;
-  padding: 25px;
-  word-break: break-word;
-  overflow-wrap: break-word;
 }
 .projekti-lokacija {
   width: 100%;
-  padding: 25px 0;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
+  padding: 25px;
   font-weight: bold;
   display: flex;
   align-items: center;
@@ -686,30 +708,40 @@ body {
 /*-----------------------------*/
 /*-----------Forma-------------*/
 /*-----------------------------*/
-/*-----Kontenjer gdje se nalazi NASLOV + linija ispod naslova*/
+.forma-container {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  background: url(slike/kontakt.jpeg);
+  background-position: center;
+  background-size: cover;
+  border-bottom: 4px solid #ff6600;
+}
+.forma-main {
+  background-color: #333333cc;
+  width: 100%;
+  min-height: 100vh;
+  color: white;
+  padding: 50px 0;
+  display: flex;
+  flex-direction: column;
+}
 .forma-naslov {
   width: 100%;
-  padding-bottom: 25px;
   height: 100%;
+  padding: 25px 0;
 }
 .forma-naslov h1 {
   font-size: 3rem;
-  color: #ff6600;
   text-align: center;
+  color: #ff6600;
 }
 .forma-naslov hr {
   width: 60%;
+  margin: 10px auto;
   height: 4px;
   background-color: #ff6600;
   border: 0;
-  margin: 0 auto;
-}
-/*---Glavni kontenjer FORME-----*/
-.forma-container {
-  width: 100%;
-  height: 100%;
-  min-height: 100px;
-  padding: 100px 0;
 }
 /*-----dodatni kontenjer za kontrolu----*/
 .forma-wrapper {
@@ -717,80 +749,62 @@ body {
   height: 100%;
   margin: 0 auto;
 }
-/*----sama forma, koristi se unutar <form> taga---*/
-.forma-main {
+.forma-prvi {
+  width: 100%;
+  display: flex;
   flex-direction: row;
-  display: flex;
   gap: 50px;
-  align-items: center;
   justify-content: center;
+  margin: 25px 0;
 }
-/*----LIJEVI STUPAC = IME, PREZIME EMAIL----*/
-/*----DESNI STUPAC = PORUKA + GUMB ZA SLAJNJE---*/
-.forma-main-lijevo,
-.forma-main-desno {
-  flex-direction: column;
-  display: flex;
-}
-.forma-main-lijevo {
-  width: 40%;
-}
-.forma-main-desno {
-  width: 60%;
-}
-/*----prostor gdje se unose podatci----*/
-.forma-main label {
-  color: #ff6600;
-  font-size: 1.5rem;
-  font-weight: bold;
+.forma-drugi {
+  width: 100%;
+  margin-bottom: 25px;
+  flex-direction: row;
 }
 #unos,
-#poruka {
-  padding: 10px 10px;
-  background-color: #f29559;
+#upit {
+  background-color: #333;
   border-radius: 10px;
-  width: 100%;
-  color: white;
-  border: none;
+  padding: 15px 10px;
+  border-bottom: 4px solid #ff6600;
   outline: none;
-  transition: all 0.3s ease-in-out;
+  color: #f29559;
   font-size: 1.2rem;
-  color: #333333;
 }
-#poruka {
-  min-height: 100px;
+#unos {
+  width: 50%;
+}
+#upit {
+  width: 100%;
+  min-height: 200px;
+  margin-bottom: 25px;
   resize: none;
 }
-#unos:hover {
-  transform: translateX(2px);
-  box-shadow: 0px 2px 0px 0px rgba(255, 255, 255, 0.8);
-  margin-bottom: 10px;
-}
-#poruka:hover {
-  transform: translate(2px, 2px);
-  box-shadow: 0px 2px 0px 0px rgba(255, 255, 255, 0.8);
-  margin: 2px 0;
-}
 .forma-gumb {
+  outline: none;
+  background-color: #333;
   width: 100%;
-  padding: 15px 10px;
-  background-color: #f29559;
-  font-size: 1.2rem;
-  color: #333333;
   border-radius: 10px;
-  text-decoration: none;
-  margin: 10px 0;
-  font-weight: bold;
+  padding: 20px 15px;
+  border-bottom: 4px solid #ff6600;
+  color: #ff6600;
+  font-size: 1.5rem;
   display: inline-block;
   text-align: center;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  text-shadow: 0 0 0px rgba(255, 102, 0, 0);
   transition: all 0.3s ease-in-out;
 }
 .forma-gumb:hover {
-  background-color: #ff6600;
-  color: #000000;
-  font-style: italic;
   cursor: pointer;
-  transform: translate(2px, 2px);
+  background-color: #283845;
+  color: #ff6600;
+  text-shadow:
+    0.5px 0 0 #ff6600,
+    -0.5px 0 0 #ff6600;
 }
 /*-----------------------------*/
 /*-----------FOOTER-------------*/
@@ -1130,47 +1144,63 @@ footer {
   /*---PROJEKTI-----*/
   /*----------------*/
   .projekti-container {
-    border-bottom: 0;
     border-top: 0;
+    min-height: 200px;
+    border-bottom: 3px solid #ff6600;
   }
   .projekti-naslov {
-    padding: 20px 0;
+    padding: 15px 0;
   }
   .projekti-naslov h1 {
-    font-size: 2.5rem;
+    font-size: 2rem;
   }
   .projekti-naslov hr {
-    width: 80%;
+    width: 50%;
     height: 3px;
   }
   .projekti-main {
-    margin-bottom: 25px;
+    width: 100%;
+    position: relative;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    background-color: red;
+    height: 100%;
+    border-radius: 10px;
+    background-color: #333;
+    overflow: auto;
+    cursor: pointer;
+  }
+  .projekti-main::-webkit-scrollbar {
+    display: none;
   }
   .projekti-wrapper {
-    gap: 35px;
-    margin-left: 15px;
+    width: 100%;
+    margin-bottom: 50px;
+    padding-left: 25px;
+    display: flex;
+    gap: 50px;
+    flex-direction: row;
   }
   .projekti-kartica {
-    min-width: 40%;
-    min-height: 100px;
+    min-width: 60%;
     border-bottom: 3px solid #ff6600;
   }
   .projekti-slika {
     height: 250px;
   }
-  .projekti-kartica h2 {
+  .projekti-naziv {
+    min-height: 100px;
     font-size: 1.5rem;
-    padding: 15px;
+    line-height: 1.5;
   }
   .projekti-lokacija {
-    padding: 15px 0;
-    font-size: 1.2rem;
+    font-size: 1rem;
+    padding: 15px;
   }
   .projekti-lokacija img {
     width: 40px;
     height: 40px;
   }
-
   .kontakt-container {
     min-height: 200px;
     height: auto;
@@ -1206,49 +1236,52 @@ footer {
   /*-----------Forma-------------*/
   /*-----------------------------*/
   /*-----Kontenjer gdje se nalazi NASLOV + linija ispod naslova*/
+  /*-----------------------------*/
+  /*-----------Forma-------------*/
+  /*-----------------------------*/
+  .forma-container {
+    border-bottom: 3px solid #ff6600;
+  }
+  .forma-main {
+    padding: 25px 0;
+    display: flex;
+    flex-direction: column;
+  }
   .forma-naslov {
-    padding-bottom: 15px;
+    padding: 20px 0;
   }
   .forma-naslov h1 {
-    font-size: 2rem;
+    font-size: 2.5rem;
   }
   .forma-naslov hr {
     width: 80%;
-  }
-  /*---Glavni kontenjer FORME-----*/
-  .forma-container {
-    padding: 50px 0;
+    height: 3px;
   }
   .forma-wrapper {
-    width: 80%;
+    width: 90%;
   }
-  /*----sama forma, koristi se unutar <form> taga---*/
-  .forma-main {
+  .forma-prvi {
     gap: 25px;
   }
-  /*----LIJEVI STUPAC = IME, PREZIME EMAIL----*/
-  /*----DESNI STUPAC = PORUKA + GUMB ZA SLAJNJE---*/
-  .forma-main-lijevo {
-    width: 35%;
-  }
-  .forma-main-desno {
-    width: 65%;
-  }
-  /*----prostor gdje se unose podatci----*/
-  .forma-main label {
-    font-size: 1.2rem;
+  .forma-drugi {
+    width: 100%;
+    margin-bottom: 25px;
+    flex-direction: row;
   }
   #unos,
-  #poruka {
+  #upit {
     font-size: 1rem;
   }
-  #poruka {
-    min-height: 100px;
-    resize: none;
+  #unos {
+    width: 50%;
+  }
+  #upit {
+    width: 100%;
+    min-height: 150px;
+    margin-bottom: 25px;
   }
   .forma-gumb {
-    padding: 10px 10px;
-    margin: 5px 0;
+    font-size: 1.2rem;
   }
   /*-------------------------------------------*/
   /*-------------Podnozje stranice-------------*/
@@ -1524,102 +1557,80 @@ footer {
   /*-------5. DIO---------*/
   /*------PROJEKTI--------*/
   /*----------------------*/
-  .projekti-naslov {
-    padding: 15px 0;
+  .projekti-container {
+    border: bottom 0;
   }
   .projekti-naslov h1 {
     font-size: 2rem;
+    padding: 0 15px;
     font-style: italic;
     color: white;
   }
   .projekti-naslov hr {
     width: 50%;
+    height: 3px;
     margin: 10px 0;
   }
-  .projekti-main {
-    margin-bottom: 25px;
-  }
   .projekti-wrapper {
-    gap: 15px;
-    margin-left: 15px;
+    margin-bottom: 25px;
+    padding-left: 15px;
+    gap: 25px;
   }
   .projekti-kartica {
-    min-width: 60%;
+    min-width: 80%;
   }
-  .projekti-slika {
-    height: 300px;
-  }
-  .projekti-kartica h2 {
-    font-size: 1.2rem;
+  .projekti-naziv {
+    min-height: 100px;
+    font-size: 1.5rem;
+    line-height: 1.5;
   }
   .projekti-lokacija {
+    min-height: 100px;
     font-size: 1rem;
+    padding: 15px;
   }
   .projekti-lokacija img {
     width: 30px;
     height: 30px;
   }
-
-  /*-------------------------------------------*/
-  /*6. dio ------ Kontakt*/
-  .kontakt-container {
-    padding: 25px 0;
-  }
-  .kontakt-naslov {
-    font-size: 1.2rem;
-  }
-  .kontakt-main {
-    width: 90%;
-    margin: 25px auto;
-    flex-direction: column;
-    gap: 10px;
-  }
-  .kontakt-kartica {
-    width: 100%;
-    padding: 20px 0;
-    margin-bottom: 10px;
-  }
-  .kontakt-kartica img {
-    width: 70px;
-    height: 70px;
-    margin: 10px 0;
-  }
-  .kontakt-kartica-link-tekst {
-    display: none;
-  }
   /*-----------------------------*/
   /*-----------Forma-------------*/
   /*-----------------------------*/
   /*-----Kontenjer gdje se nalazi NASLOV + linija ispod naslova*/
+  .forma-container {
+    border: 0;
+    min-height: 100px;
+  }
+  .forma-main {
+    padding: 25px 0;
+    display: flex;
+    flex-direction: column;
+  }
   .forma-naslov {
-    padding-bottom: 15px;
+    padding: 15px;
   }
   .forma-naslov h1 {
     font-size: 2rem;
+    font-style: italic;
+    color: white;
   }
   .forma-naslov hr {
-    margin: 10px 0;
     width: 50%;
-  }
-  /*---Glavni kontenjer FORME-----*/
-  .forma-container {
-    padding: 25px 0;
+    float: right;
+    height: 3px;
   }
   .forma-wrapper {
     width: 90%;
   }
-  /*----sama forma, koristi se unutar <form> taga---*/
-  .forma-main {
+  .forma-prvi {
     gap: 15px;
     flex-direction: column;
   }
-  /*----LIJEVI STUPAC = IME, PREZIME EMAIL----*/
-  /*----DESNI STUPAC = PORUKA + GUMB ZA SLAJNJE---*/
-  .forma-main-lijevo {
+  #unos{
     width: 100%;
   }
-  .forma-main-desno {
-    width: 100%;
+  .forma-drugi {
+    margin-bottom: 15px;
   }
   .forma-gumb {
     font-size: 1rem;
